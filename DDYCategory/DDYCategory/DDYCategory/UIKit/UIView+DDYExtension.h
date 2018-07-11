@@ -1,17 +1,8 @@
-//
-//  UIView+DDYExtension.h
-//  DDYCategory
-//
-//  Created by SmartMesh on 2018/7/11.
-//  Copyright © 2018年 com.smartmesh. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @interface UIView (DDYExtension)
 
 #pragma mark - ---------------- 布局 ------------------
-
 @property (nonatomic, assign) CGFloat ddy_x;
 @property (nonatomic, assign) CGFloat ddy_y;
 @property (nonatomic, assign) CGFloat ddy_w;
@@ -49,7 +40,7 @@
 
 #pragma mark - ---------------- UI ------------------
 /** 阴影 */
-- (void)ddy_LayerShadow:(nullable UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius;
+- (void)ddy_LayerShadow:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity radius:(CGFloat)radius;
 /** 部分圆角 UIRectCornerBottomLeft | UIRectCornerBottomRight */
 - (void)ddy_RoundCorners:(UIRectCorner)corners radius:(CGFloat)radius;
 
@@ -71,5 +62,7 @@
 /** 某个view上的rect在本视图上的相对rect */
 - (CGRect)ddy_ConvertRect:(CGRect)rect fromView:(nullable UIView *)view;
 
+/** 是否打印hitTest日志 */
+@property (nonatomic, assign) BOOL isShowHitTestLog;
 
 @end

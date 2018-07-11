@@ -1,14 +1,24 @@
-//
-//  UIView+DDYExtension.m
-//  DDYCategory
-//
-//  Created by SmartMesh on 2018/7/11.
-//  Copyright © 2018年 com.smartmesh. All rights reserved.
-//
-
 #import "UIView+DDYExtension.h"
+#import <objc/runtime.h> 
 
 @implementation UIView (DDYExtension)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self changeOrignalSEL:@selector(hitTest:withEvent:) swizzleSEL:@selector(ddy_HitTest:withEvent:)];
+    });
+}
+
++ (void)changeOrignalSEL:(SEL)orignalSEL swizzleSEL:(SEL)swizzleSEL {
+    Method originalMethod = class_getInstanceMethod([self class], orignalSEL);
+    Method swizzleMethod = class_getInstanceMethod([self class], swizzleSEL);
+    if (class_addMethod([self class], orignalSEL, method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod))) {
+        class_replaceMethod([self class], swizzleSEL, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzleMethod);
+    }
+}
 
 #pragma mark - 布局
 #pragma mark x的setter和getter方法
@@ -220,11 +230,11 @@
 
 #pragma mark - UI
 #pragma mark 阴影
-- (void)ddy_LayerShadow:(UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius {
+- (void)ddy_LayerShadow:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity radius:(CGFloat)radius {
     self.layer.shadowColor = color.CGColor;
     self.layer.shadowOffset = offset;
+    self.layer.shadowOpacity = opacity;
     self.layer.shadowRadius = radius;
-    self.layer.shadowOpacity = 1;
     self.layer.shouldRasterize = YES;
     self.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
@@ -369,5 +379,24 @@
     rect = [self convertRect:rect fromView:to];
     return rect;
 }
+
+- (UIView *)ddy_HitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *view = [self ddy_HitTest:point withEvent:event];
+    if (self.isShowHitTestLog) {
+        NSLog(@"UIView+DDYExtension:%d\n%s [self class]%@ [hitView class]:%@", __LINE__, __FUNCTION__, [self class], [view class]);
+    }
+    return view;
+}
+
+- (BOOL)isShowHitTestLog {
+    NSNumber *number = objc_getAssociatedObject(self, "ddyHitTestLogKey");
+    return number ? [number boolValue] : NO;
+}
+
+- (void)setIsShowHitTestLog:(BOOL)isShowHitTestLog {
+    NSNumber *number = [NSNumber numberWithBool:isShowHitTestLog];
+    objc_setAssociatedObject(self, "ddyHitTestLogKey", number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 @end
