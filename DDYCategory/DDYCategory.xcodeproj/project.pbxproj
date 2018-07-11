@@ -14,6 +14,8 @@
 		A481C71320F5BB170052691B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C70E20F5BB170052691B /* ViewController.m */; };
 		A481C72620F5E4EF0052691B /* UIButton+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C72220F5E4EF0052691B /* UIButton+DDYExtension.m */; };
 		A481C72720F5E4EF0052691B /* UIView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C72420F5E4EF0052691B /* UIView+DDYExtension.m */; };
+		A481C72B20F5E9BA0052691B /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C72A20F5E9BA0052691B /* NSString+DDYExtension.m */; };
+		A481C72E20F5F7300052691B /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A481C72D20F5F7300052691B /* keccak.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		A481C72320F5E4EF0052691B /* UIView+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C72420F5E4EF0052691B /* UIView+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDYExtension.m"; sourceTree = "<group>"; };
 		A481C72520F5E4EF0052691B /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
+		A481C72920F5E9BA0052691B /* NSString+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYExtension.h"; sourceTree = "<group>"; };
+		A481C72A20F5E9BA0052691B /* NSString+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYExtension.m"; sourceTree = "<group>"; };
+		A481C72C20F5F7300052691B /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
+		A481C72D20F5F7300052691B /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				A481C72520F5E4EF0052691B /* DDYCategoryHeader.h */,
+				A481C72820F5E9A10052691B /* Foundation */,
 				A481C72020F5E4EF0052691B /* UIKit */,
 			);
 			path = DDYCategory;
@@ -100,6 +107,17 @@
 				A481C72420F5E4EF0052691B /* UIView+DDYExtension.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A481C72820F5E9A10052691B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A481C72C20F5F7300052691B /* keccak.h */,
+				A481C72D20F5F7300052691B /* keccak.c */,
+				A481C72920F5E9BA0052691B /* NSString+DDYExtension.h */,
+				A481C72A20F5E9BA0052691B /* NSString+DDYExtension.m */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A481C71320F5BB170052691B /* ViewController.m in Sources */,
+				A481C72B20F5E9BA0052691B /* NSString+DDYExtension.m in Sources */,
 				A481C72620F5E4EF0052691B /* UIButton+DDYExtension.m in Sources */,
 				A481C72720F5E4EF0052691B /* UIView+DDYExtension.m in Sources */,
 				A481C71220F5BB170052691B /* main.m in Sources */,
 				A481C70F20F5BB170052691B /* AppDelegate.m in Sources */,
+				A481C72E20F5F7300052691B /* keccak.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
