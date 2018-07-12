@@ -6,7 +6,7 @@
 @implementation NSString (DDYExtension)
 
 #pragma mark 沙盒documents路径
-+ (NSString *)ddy_Documents {
++ (NSString *)ddy_DocumentPath {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
 }
 
@@ -15,12 +15,12 @@
     return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
 }
 #pragma mark 沙盒library路径
-+ (NSString *)ddy_LibraryPath {
++ (NSString *)ddy_LibraryPath{
     return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
 }
 
 #pragma mark bundleName (show in SpringBoard)
-+ (NSString *)ddy_AppBundleName {
++ (NSString *)ddy_AppBundleName{
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
 }
 #pragma mark bundleID com.**.app
@@ -57,7 +57,7 @@
 }
 
 #pragma mark 数据data转字符串
-+ (NSString *)ddy_DataToString:(NSData *)data {
++ (NSString *)ddy_DataToString:(NSData *)data{
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return str ? str : [[NSString alloc] initWithData:data encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
 }
@@ -258,9 +258,9 @@
     NSMutableData *hexData = [[NSMutableData alloc] initWithCapacity:8];
     NSRange range;
     if ([self length] %2 == 0) {
-        range = NSMakeRange(0,2);
+        range = NSMakeRange(0, 2);
     } else {
-        range = NSMakeRange(0,1);
+        range = NSMakeRange(0, 1);
     }
     for (NSInteger i = range.location; i < [self length]; i += 2) {
         unsigned int anInt;
