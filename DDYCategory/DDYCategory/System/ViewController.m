@@ -61,8 +61,12 @@
 }
 
 - (void)handleBtn {
-    UIAlertView *alertView = [UIAlertView ddy_AlertTitle:@"0" message:@"1" cancelTitle:@"Cancel" otherTitle:@"OK" clickIndex:^(NSInteger index) {
-        NSLog(@"%ld", index);
+    [UIAlertView ddy_AlertTitle:@"0"
+                        message:@"1"
+                    cancelTitle:@"Cancel"
+                     otherTitle:@"OK"
+                clickIndexBlock:^(UIAlertView *alertView, NSInteger index) {
+                    NSLog(@"%ld", index);
     }];
 }
 

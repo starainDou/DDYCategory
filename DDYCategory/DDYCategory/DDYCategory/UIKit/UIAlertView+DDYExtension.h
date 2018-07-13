@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^ClickButtonIndexBlock) (NSInteger index);
+typedef void(^DDYAlertClickIndexBlock) (UIAlertView *alertView, NSInteger index);
 
 @interface UIAlertView (DDYExtension)
 
@@ -25,6 +25,6 @@ typedef void(^ClickButtonIndexBlock) (NSInteger index);
                         message:(NSString *)message
                     cancelTitle:(NSString *)cancelTitle
                      otherTitle:(NSString *)otherTitle
-                     clickIndex:(ClickButtonIndexBlock)clickIndex;
+                clickIndexBlock:(DDYAlertClickIndexBlock)clickIndexBlock;
 
 @end

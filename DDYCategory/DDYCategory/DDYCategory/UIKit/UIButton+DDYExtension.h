@@ -13,6 +13,8 @@ typedef NS_ENUM(NSInteger, DDYBtnStyle) {
     DDYBtnStyleImgLeftThenRight  = 9,     // 左文右图，整体居左，设置间隙
 };
 
+typedef void(^DDYButtonTouchUpInsideBlock) (UIButton *sender);
+
 @interface UIButton (DDYExtension)
 /** 布局方式 */
 @property (nonatomic, assign) DDYBtnStyle btnStyle;
@@ -20,5 +22,7 @@ typedef NS_ENUM(NSInteger, DDYBtnStyle) {
 @property (nonatomic, assign) CGFloat padding;
 
 - (void)ddy_SetStyle:(DDYBtnStyle)style padding:(CGFloat)padding;
+
+- (void)ddy_TouchUpInsideBlock:(DDYButtonTouchUpInsideBlock)block;
 
 @end

@@ -122,10 +122,21 @@
     return number ? [number floatValue] : 0.f;
 }
 
-
 - (void)ddy_SetStyle:(DDYBtnStyle)style padding:(CGFloat)padding {
     self.btnStyle = style;
     self.padding = padding;
 }
+
+#pragma mark - 对touchUpInside进行block
+- (void)ddy_TouchUpInsideBlock:(DDYButtonTouchUpInsideBlock)block {
+    if (block) objc_setAssociatedObject(self, "DDYTouchUpInsideKey", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self addTarget:self action:@selector(handleTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)handleTouchUpInside:(UIButton *)sender {
+    DDYButtonTouchUpInsideBlock block = objc_getAssociatedObject(self, "DDYTouchUpInsideKey");
+    block(sender);
+}
+
 
 @end

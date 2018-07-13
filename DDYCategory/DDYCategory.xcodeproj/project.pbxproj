@@ -21,6 +21,7 @@
 		A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C76A20F871440052691B /* UIColor+DDYExtension.m */; };
 		A481C76E20F891D70052691B /* NSTimer+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C76D20F891D70052691B /* NSTimer+DDYExtension.m */; };
 		A481C77120F8939F0052691B /* UIAlertView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C77020F8939F0052691B /* UIAlertView+DDYExtension.m */; };
+		A481C77420F8A4640052691B /* UITextField+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C77320F8A4640052691B /* UITextField+DDYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		A481C76D20F891D70052691B /* NSTimer+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+DDYExtension.m"; sourceTree = "<group>"; };
 		A481C76F20F8939F0052691B /* UIAlertView+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C77020F8939F0052691B /* UIAlertView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+DDYExtension.m"; sourceTree = "<group>"; };
+		A481C77220F8A4640052691B /* UITextField+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+DDYExtension.h"; sourceTree = "<group>"; };
+		A481C77320F8A4640052691B /* UITextField+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DDYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				A481C77020F8939F0052691B /* UIAlertView+DDYExtension.m */,
 				A481C76620F85E340052691B /* UIImage+DDYExtension.h */,
 				A481C76720F85E340052691B /* UIImage+DDYExtension.m */,
+				A481C77220F8A4640052691B /* UITextField+DDYExtension.h */,
+				A481C77320F8A4640052691B /* UITextField+DDYExtension.m */,
 				A481C76920F871440052691B /* UIColor+DDYExtension.h */,
 				A481C76A20F871440052691B /* UIColor+DDYExtension.m */,
 				A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */,
@@ -216,6 +221,7 @@
 			files = (
 				A481C76E20F891D70052691B /* NSTimer+DDYExtension.m in Sources */,
 				A481C71320F5BB170052691B /* ViewController.m in Sources */,
+				A481C77420F8A4640052691B /* UITextField+DDYExtension.m in Sources */,
 				A481C72B20F5E9BA0052691B /* NSString+DDYExtension.m in Sources */,
 				A481C72620F5E4EF0052691B /* UIButton+DDYExtension.m in Sources */,
 				A481C72720F5E4EF0052691B /* UIView+DDYExtension.m in Sources */,
