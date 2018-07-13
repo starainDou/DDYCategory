@@ -1,4 +1,6 @@
 #import "UIImage+DDYExtension.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <ImageIO/ImageIO.h>
 
 #define DDY_FOUR_CC(c1,c2,c3,c4) ((uint32_t)(((c4) << 24) | ((c3) << 16) | ((c2) << 8) | (c1)))
 #define DDY_TWO_CC(c1,c2) ((uint16_t)(((c2) << 8) | (c1)))
