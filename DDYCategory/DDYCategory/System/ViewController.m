@@ -55,8 +55,15 @@
     [button ddy_SetStyle:style padding:padding];
     [button setFrame:CGRectMake(x, DDYTopH+10, 60, 60)];
     [button setIsShowHitTestLog:YES];
+    [button addTarget:self action:@selector(handleBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     return button;
+}
+
+- (void)handleBtn {
+    UIAlertView *alertView = [UIAlertView ddy_AlertTitle:@"0" message:@"1" cancelTitle:@"Cancel" otherTitle:@"OK" clickIndex:^(NSInteger index) {
+        NSLog(@"%ld", index);
+    }];
 }
 
 #pragma mark 绘制圆形图片
