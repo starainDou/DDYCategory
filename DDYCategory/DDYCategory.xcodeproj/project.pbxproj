@@ -22,6 +22,7 @@
 		A481C76E20F891D70052691B /* NSTimer+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C76D20F891D70052691B /* NSTimer+DDYExtension.m */; };
 		A481C77120F8939F0052691B /* UIAlertView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C77020F8939F0052691B /* UIAlertView+DDYExtension.m */; };
 		A481C77420F8A4640052691B /* UITextField+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C77320F8A4640052691B /* UITextField+DDYExtension.m */; };
+		A481C77720F8AF230052691B /* NSArray+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C77620F8AF230052691B /* NSArray+DDYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		A481C77020F8939F0052691B /* UIAlertView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+DDYExtension.m"; sourceTree = "<group>"; };
 		A481C77220F8A4640052691B /* UITextField+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C77320F8A4640052691B /* UITextField+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DDYExtension.m"; sourceTree = "<group>"; };
+		A481C77520F8AF230052691B /* NSArray+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDYExtension.h"; sourceTree = "<group>"; };
+		A481C77620F8AF230052691B /* NSArray+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				A481C72A20F5E9BA0052691B /* NSString+DDYExtension.m */,
 				A481C76C20F891D70052691B /* NSTimer+DDYExtension.h */,
 				A481C76D20F891D70052691B /* NSTimer+DDYExtension.m */,
+				A481C77520F8AF230052691B /* NSArray+DDYExtension.h */,
+				A481C77620F8AF230052691B /* NSArray+DDYExtension.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				A481C71220F5BB170052691B /* main.m in Sources */,
 				A481C70F20F5BB170052691B /* AppDelegate.m in Sources */,
 				A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */,
+				A481C77720F8AF230052691B /* NSArray+DDYExtension.m in Sources */,
 				A481C72E20F5F7300052691B /* keccak.c in Sources */,
 				A481C73220F60E120052691B /* AppDelegate+DDYNotification.m in Sources */,
 				A481C77120F8939F0052691B /* UIAlertView+DDYExtension.m in Sources */,
