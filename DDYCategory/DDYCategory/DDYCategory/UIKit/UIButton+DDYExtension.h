@@ -19,4 +19,6 @@ typedef NS_ENUM(NSInteger, DDYBtnStyle) {
 /** 图文间距 */
 @property (nonatomic, assign) CGFloat padding;
 
+- (void)ddy_SetStyle:(DDYBtnStyle)style padding:(CGFloat)padding;
+
 @end

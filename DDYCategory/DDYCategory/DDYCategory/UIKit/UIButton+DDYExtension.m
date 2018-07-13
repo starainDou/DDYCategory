@@ -122,4 +122,10 @@
     return number ? [number floatValue] : 0.f;
 }
 
+
+- (void)ddy_SetStyle:(DDYBtnStyle)style padding:(CGFloat)padding {
+    self.btnStyle = style;
+    self.padding = padding;
+}
+
 @end

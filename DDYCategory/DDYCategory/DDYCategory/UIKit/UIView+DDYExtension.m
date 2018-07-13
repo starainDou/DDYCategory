@@ -383,7 +383,7 @@
 - (UIView *)ddy_HitTest:(CGPoint)point withEvent:(UIEvent *)event {
     UIView *view = [self ddy_HitTest:point withEvent:event];
     if (self.isShowHitTestLog) {
-        NSLog(@"UIView+DDYExtension:%d\n%s [self class]%@ [hitView class]:%@", __LINE__, __FUNCTION__, [self class], [view class]);
+        NSLog(@"  UIView+DDYExtension:%d %s [self class]%@ [hitView class]:%@", __LINE__, __FUNCTION__, [self class], [view class]);
     }
     return view;
 }

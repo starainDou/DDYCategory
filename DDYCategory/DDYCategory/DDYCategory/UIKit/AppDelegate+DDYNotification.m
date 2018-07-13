@@ -9,8 +9,8 @@
 + (void)load {
     // NSSelectorFromString(@"methodName") 或 @selector(methodName);
     // 交换启动方法
-    [self changeOrignalSEL:@selector(application:didFinishLaunchingWithOptions:)
-                swizzleSEL:@selector(ddy_Application:didFinishLaunchingWithOptions:)];
+//    [self changeOrignalSEL:@selector(application:didFinishLaunchingWithOptions:)
+//                swizzleSEL:@selector(ddy_Application:didFinishLaunchingWithOptions:)];
 }
 
 + (void)changeOrignalSEL:(SEL)orignalSEL swizzleSEL:(SEL)swizzleSEL {

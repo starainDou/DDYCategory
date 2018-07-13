@@ -17,6 +17,8 @@
 		A481C72B20F5E9BA0052691B /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C72A20F5E9BA0052691B /* NSString+DDYExtension.m */; };
 		A481C72E20F5F7300052691B /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A481C72D20F5F7300052691B /* keccak.c */; };
 		A481C73220F60E120052691B /* AppDelegate+DDYNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C73120F60E120052691B /* AppDelegate+DDYNotification.m */; };
+		A481C76820F85E340052691B /* UIImage+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C76720F85E340052691B /* UIImage+DDYExtension.m */; };
+		A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C76A20F871440052691B /* UIColor+DDYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		A481C72D20F5F7300052691B /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
 		A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DDYNotification.h"; sourceTree = "<group>"; };
 		A481C73120F60E120052691B /* AppDelegate+DDYNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DDYNotification.m"; sourceTree = "<group>"; };
+		A481C76620F85E340052691B /* UIImage+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+DDYExtension.h"; sourceTree = "<group>"; };
+		A481C76720F85E340052691B /* UIImage+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DDYExtension.m"; sourceTree = "<group>"; };
+		A481C76920F871440052691B /* UIColor+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDYExtension.h"; sourceTree = "<group>"; };
+		A481C76A20F871440052691B /* UIColor+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +110,14 @@
 		A481C72020F5E4EF0052691B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A481C72120F5E4EF0052691B /* UIButton+DDYExtension.h */,
-				A481C72220F5E4EF0052691B /* UIButton+DDYExtension.m */,
 				A481C72320F5E4EF0052691B /* UIView+DDYExtension.h */,
 				A481C72420F5E4EF0052691B /* UIView+DDYExtension.m */,
+				A481C72120F5E4EF0052691B /* UIButton+DDYExtension.h */,
+				A481C72220F5E4EF0052691B /* UIButton+DDYExtension.m */,
+				A481C76620F85E340052691B /* UIImage+DDYExtension.h */,
+				A481C76720F85E340052691B /* UIImage+DDYExtension.m */,
+				A481C76920F871440052691B /* UIColor+DDYExtension.h */,
+				A481C76A20F871440052691B /* UIColor+DDYExtension.m */,
 				A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */,
 				A481C73120F60E120052691B /* AppDelegate+DDYNotification.m */,
 			);
@@ -198,8 +208,10 @@
 				A481C72B20F5E9BA0052691B /* NSString+DDYExtension.m in Sources */,
 				A481C72620F5E4EF0052691B /* UIButton+DDYExtension.m in Sources */,
 				A481C72720F5E4EF0052691B /* UIView+DDYExtension.m in Sources */,
+				A481C76820F85E340052691B /* UIImage+DDYExtension.m in Sources */,
 				A481C71220F5BB170052691B /* main.m in Sources */,
 				A481C70F20F5BB170052691B /* AppDelegate.m in Sources */,
+				A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */,
 				A481C72E20F5F7300052691B /* keccak.c in Sources */,
 				A481C73220F60E120052691B /* AppDelegate+DDYNotification.m in Sources */,
 			);
