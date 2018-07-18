@@ -212,4 +212,103 @@
     return [self ddy_changeBright:-2 saturation:-2 contrast:contrast];
 }
 
+#pragma mark 拍照后图片旋转或者颠倒解决
+- (UIImage *)ddy_fixOrientation {
+    UIImage *orignalImage = self;
+    if (orignalImage.imageOrientation == UIImageOrientationUp)
+        return orignalImage;
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (orignalImage.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, orignalImage.size.width, orignalImage.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, orignalImage.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, orignalImage.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        default:
+            break;
+    }
+    
+    switch (orignalImage.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, orignalImage.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, orignalImage.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        default:
+            break;
+    }
+    CGContextRef ctx = CGBitmapContextCreate(NULL, orignalImage.size.width, orignalImage.size.height,
+                                             CGImageGetBitsPerComponent(orignalImage.CGImage), 0,
+                                             CGImageGetColorSpace(orignalImage.CGImage),
+                                             CGImageGetBitmapInfo(orignalImage.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (orignalImage.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            CGContextDrawImage(ctx, CGRectMake(0,0,orignalImage.size.height,orignalImage.size.width), orignalImage.CGImage);
+            break;
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,orignalImage.size.width,orignalImage.size.height), orignalImage.CGImage);
+            break;
+    }
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage *img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    return img;
+}
+
+// 通过cgimage创建一个ciimage，用于滤镜处理的蓝本
+// CIImage* ci = [CIImage imageWithCGImage:[imageV.image CGImage]];
+// 通过url地址来获取一张图片，并创建ciimage用于滤镜处理的蓝本
+// CIImage* ci1 = [CIImage imageWithContentsOfURL:nil];
+// 通过nsdata获取一张图片，并创建ciimage用于滤镜处理的蓝本
+// CIImage* ci2 = [CIImage imageWithData:nil];
+// 通过cvpixel取得每一帧的图片，用于视频使用滤镜功能
+// CIImage* ci3 = [CIImage imageWithCVPixelBuffer:nil];
+#pragma mark 根据coreImage 滤镜名称为原图加滤镜
+- (UIImage *)ddy_FilterWithFilterName:(NSString *)filterName {
+    CIImage *ciImage = [CIImage imageWithCGImage:self.CGImage]; // 直接img.CIImage 是nil
+    if (!filterName) return self;
+    CIFilter *filter = [CIFilter filterWithName:filterName];
+    if (!filter) return self;
+    [filter setDefaults];
+    [filter setValue:ciImage forKey:kCIInputImageKey];
+    CIImage *currentImage = filter.outputImage;
+    if (!currentImage || CGRectIsEmpty(currentImage.extent)) return self;
+    
+    // 使用gpu渲染
+    // NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    // [options setObject:[NSNull null] forKey:kCIContextWorkingColorSpace];
+    // CIContext* context = [CIContext contextWithEAGLContext:[[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2] options:options];
+    // 使用cpu渲染
+    CIContext* context = [CIContext contextWithOptions:nil];
+    // 通过cicontext渲染产生新的图片，ciimage的extent属性相当于bounds属性，代表图片的大小
+    CGImageRef filterimge = [context createCGImage:currentImage fromRect:currentImage.extent];
+    UIImage *endImage = [UIImage imageWithCGImage:filterimge];
+    CGImageRelease(filterimge);
+    return endImage;
+}
+
 @end

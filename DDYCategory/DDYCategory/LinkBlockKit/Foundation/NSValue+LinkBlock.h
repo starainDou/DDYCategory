@@ -1,0 +1,43 @@
+
+
+
+#import "LinkBlockDefine.h"
+
+#ifndef NSValueNew
+#define NSValueNew(...) ((NSValue*)(LBBoxValue((__VA_ARGS__))))
+#endif
+@interface NSObject(NSValueLinkBlock)
+/** <^()> */
+LBDeclare NSUInteger       (^valueNSRangeLocation)();
+/** <^()> */
+LBDeclare NSUInteger       (^valueNSRangeLength)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGPointX)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGPointY)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGSizeWidth)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGSizeHeight)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGRectX)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGRectY)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGRectWidth)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGRectHeight)();
+/** <^()> */
+LBDeclare CGSize           (^valueCGRectSize)();
+/** <^()> */
+LBDeclare CGPoint          (^valueCGRectOrigin)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGVectorX)();
+/** <^()> */
+LBDeclare CGFloat          (^valueCGVectorY)();
+/** <^(NSArray* views)> */
+LBDeclare NSValue*         (^valueCGSizeSetToViews)(NSArray* views);
+/** <^(NSArray* views)> */
+LBDeclare NSValue*         (^valueCGPointSetToViews)(NSArray* views);
+
+@end

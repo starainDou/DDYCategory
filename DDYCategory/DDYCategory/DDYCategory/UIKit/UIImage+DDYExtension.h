@@ -56,7 +56,10 @@ CG_EXTERN DDYImageType DDYImageDetectType(CFDataRef data);
 /** 改变图片对比度 [0, 4] */
 - (UIImage *)ddy_ChangeContrast:(CGFloat)contrast;
 
+/** 拍照后图片旋转或者颠倒解决 */
+- (UIImage *)ddy_fixOrientation;
 
-
+/** 根据coreImage 滤镜名称为原图加滤镜 */
+- (UIImage *)ddy_FilterWithFilterName:(NSString *)filterName;
 
 @end

@@ -40,7 +40,7 @@
         const char *name = ivar_getName(ivar);
         NSString *objcName = [NSString stringWithUTF8String:name];
         if ([objcName isEqualToString:@"_placeholderLabel"]) {
-            NSLog(@"%d : %@",i,objcName);
+            NSLog(@"%d : %@",i, objcName);
         }
     }
 }
@@ -66,7 +66,7 @@
                     cancelTitle:@"Cancel"
                      otherTitle:@"OK"
                 clickIndexBlock:^(UIAlertView *alertView, NSInteger index) {
-                    NSLog(@"%ld", index);
+                    NSLog(@"%d", (int)index);
     }];
 }
 

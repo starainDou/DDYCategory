@@ -1,0 +1,46 @@
+
+
+
+#import "LinkBlockDefine.h"
+
+#ifndef UIBezierPathNew
+#define UIBezierPathNew ([UIBezierPath bezierPath])
+#endif
+@interface NSObject(UIBezierPathLinkBlock)
+/** <^(CGFloat lineWidth)> */
+LBDeclare UIBezierPath*    (^bezierPathSetLineWidth)(CGFloat lineWidth);
+/** <^(CGLineCap lineCapStyle)> */
+LBDeclare UIBezierPath*    (^bezierPathSetLineCapStyle)(CGLineCap lineCapStyle);
+/** <^(CGLineJoin lineJoinStyle)> */
+LBDeclare UIBezierPath*    (^bezierPathSetLineJoinStyle)(CGLineJoin lineJoinStyle);
+/** <^(CGFloat miterLimit)> */
+LBDeclare UIBezierPath*    (^bezierPathSetMiterLimit)(CGFloat miterLimit);
+/** <^(CGFloat flatness)> */
+LBDeclare UIBezierPath*    (^bezierPathSetFlatness)(CGFloat flatness);
+/** <^(CGPoint point)> */
+LBDeclare UIBezierPath*    (^bezierPathMoveToPoint)(CGPoint point);
+/** <^(CGPoint point)> */
+LBDeclare UIBezierPath*    (^bezierPathAddLineToPoint)(CGPoint point);
+/** <^(CGPoint point)> */
+LBDeclare UIBezierPath*    (^bezierPathAddCurveToPoint)(CGPoint endPoint,CGPoint controlPoint1,CGPoint controlPoint2);
+/** <^(CGPoint endPoint,CGPoint controlPoint)> */
+LBDeclare UIBezierPath*    (^bezierPathAddQuadCurveToPoint)(CGPoint endPoint,CGPoint controlPoint);
+/** <^(CGPoint center,CGFloat radius,CGFloat startAngle,CGFloat endAngle,BOOL clockwise)> */
+LBDeclare UIBezierPath*    (^bezierPathAddArcWithCenter)(CGPoint center,CGFloat radius,CGFloat startAngle,CGFloat endAngle,BOOL clockwise);
+/** <^()> */
+LBDeclare UIBezierPath*    (^bezierPathClosePath)();
+/** <^()> */
+LBDeclare UIBezierPath*    (^bezierPathRemoveAllPoints)();
+/** <^(UIBezierPath* aPath)> */
+LBDeclare UIBezierPath*    (^bezierPathAppendPath)(UIBezierPath* aPath);
+/** <^()> */
+LBDeclare UIBezierPath*    (^bezierPathByReversingPath)() NS_AVAILABLE_IOS(6_0);
+/** <^(CGPoint point)> */
+LBDeclare BOOL             (^bezierPathContainsPoint)(CGPoint point);
+/** <^()> */
+LBDeclare UIBezierPath*    (^bezierPathFill)();
+/** <^()> */
+LBDeclare UIBezierPath*    (^bezierPathStroke)();
+/** <^()> */
+LBDeclare UIBezierPath*    (^bezierPathAddClip)();
+@end
