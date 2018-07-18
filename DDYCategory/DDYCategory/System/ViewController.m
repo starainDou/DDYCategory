@@ -1,5 +1,6 @@
 #import "ViewController.h"
 #import "DDYCategoryHeader.h"
+#import "LinkBlock.h"
 #import <objc/runtime.h>
 
 #ifndef DDYTopH
@@ -31,18 +32,7 @@
     [self btn:150 style:DDYBtnStyleImgTop   padding:10];
     [self btn:220 style:DDYBtnStyleImgDown  padding:10];
     
-    // 通过运行时，发现UITextView有一个叫做“_placeHolderLabel”的私有变量
-    unsigned int count = 0;
-    Ivar *ivars = class_copyIvarList([UITextView class], &count);
-    
-    for (int i = 0; i < count; i++) {
-        Ivar ivar = ivars[i];
-        const char *name = ivar_getName(ivar);
-        NSString *objcName = [NSString stringWithUTF8String:name];
-        if ([objcName isEqualToString:@"_placeholderLabel"]) {
-            NSLog(@"%d : %@",i, objcName);
-        }
-    }
+    UIViewNew.viewSetFrame(0, DDYTopH + 80, DDYScreenW, 30).viewBGColor([UIColor redColor]).viewAddToView(self.view);
 }
 
 - (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding {
