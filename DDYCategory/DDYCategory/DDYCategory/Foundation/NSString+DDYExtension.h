@@ -19,6 +19,27 @@
 /** build 号 111 */
 + (NSString *)ddy_AppBuildNumber;
 
+/** 获取IDFA */
++ (NSString *)ddy_IDFA;
+/** 获取IDFV */
++ (NSString *)ddy_IDFV;
+/** 获取UUID */
++ (NSString *)ddy_UUID;
+/** 系统版本 */
++ (NSString *)ddy_SystemVersion;
+/** 获取设备型号 */
++ (NSString *)ddy_DeviceModel;
+/** 获取设备名字 */
++ (NSString *)ddy_DeviceName;
+/** wifi名称 */
++ (NSString *)ddy_WifiSSID;
+/** 网络制式 */
++ (NSString *)ddy_NetCarrier;
+/** 获取内网ip地址 */
++ (NSString *)ddy_WANIPAddress;
+/** 获取外网ip地址 */
++ (NSString *)ddy_InternetIPAddress;
+
 /** 过滤掉空格和某些特殊字符 */
 + (NSString *)ddy_TrimWhitespace:(nullable NSString *)string;
 

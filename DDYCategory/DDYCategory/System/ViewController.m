@@ -26,13 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _img = [self circleImageWithColor:[UIColor ddy_ColorWithHexString:@"#00FFFF"] radius:10];
-    
+    NSMutableDictionary
     [self btn:10  style:DDYBtnStyleImgLeft  padding:10];
     [self btn:80  style:DDYBtnStyleImgRight padding:10];
     [self btn:150 style:DDYBtnStyleImgTop   padding:10];
     [self btn:220 style:DDYBtnStyleImgDown  padding:10];
     
-    UIViewNew.viewSetFrame(0, DDYTopH + 80, DDYScreenW, 30).viewBGColor([UIColor redColor]).viewAddToView(self.view);
+    UIViewNew.viewSetFrame(10, DDYTopH + 80, DDYScreenW-20, 30).viewBGColor([UIColor redColor]).viewAddToView(self.view);
 }
 
 - (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding {
