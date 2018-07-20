@@ -15,9 +15,13 @@
 #define DDYScreenH [UIScreen mainScreen].bounds.size.height
 #endif
 
-@interface ViewController ()
+@interface ViewController ()<UITextViewDelegate>
 
 @property (nonatomic, strong) UIImage *img;
+
+@property (nonatomic, strong) UIView *keyboardView;
+
+@property (nonatomic, strong) UITextView *inputTextView;
 
 @end
 
@@ -54,13 +58,44 @@
     UIViewNew.viewSetFrame(10, DDYTopH + 80, DDYScreenW-20, 30).viewBGColor([UIColor redColor]).viewAddToView(self.view);
 }
 
+- (UIView *)keyboardView {
+    if (!_keyboardView) {
+        _keyboardView = UIViewNew.viewSetFrame(10, DDYTopH+120, DDYScreenW-20, 24).viewBGColor([UIColor whiteColor]).viewAddToView(self.view);
+        _keyboardView.layer.borderColor = [UIColor grayColor].CGColor;
+        _keyboardView.layer.borderWidth = 1;
+    }
+    return _keyboardView;
+}
+
+- (UITextView *)inputTextView {
+    if (!_inputTextView) {
+        _inputTextView = [[UITextView alloc] initWithFrame:CGRectMake(5, 2, self.keyboardView.bounds.size.width-10, 20)];
+        [_inputTextView setPlaceholder:@"限制字数参照 www.jianshu.com/p/7af65fcb9f87"];
+        [_inputTextView setTextContainerInset:UIEdgeInsetsMake(2.5, 0, 2.5, 0)];
+        [_inputTextView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+        [_inputTextView setDelegate:self];
+        [_inputTextView ddy_AutoHeightWithMinHeight:_inputTextView.bounds.size.height maxHeight:80];
+        [_inputTextView ddy_AllowsNonContiguousLayout:NO];
+        [_inputTextView ddy_KeyboardDismissModeOnDrag];
+        [_inputTextView setShowsVerticalScrollIndicator:NO];
+        [_inputTextView setShowsHorizontalScrollIndicator:NO];
+        [_inputTextView setBounces:NO];
+        [_inputTextView setBackgroundColor:[UIColor lightGrayColor]];
+        [self.keyboardView addSubview:_inputTextView];
+    }
+    return _inputTextView;
+}
+
 - (void)testTextView {
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, DDYTopH+120, DDYScreenW-20, 100)];
-    textView.placeholder = @"大哥，我是来占位！！！";
-    textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    textView.layer.borderColor = [UIColor blackColor].CGColor;
-    textView.layer.borderWidth = 1;
-    [self.view addSubview:textView];
+    __weak __typeof (self)weakSelf = self;
+    [self.inputTextView setAutoHeightBlock:^(CGFloat height) {
+        __strong __typeof (weakSelf)strongSelf = weakSelf;
+        strongSelf.keyboardView.ddy_h = height + 4;
+    }];
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    
 }
 
 - (void)handleBtn {
