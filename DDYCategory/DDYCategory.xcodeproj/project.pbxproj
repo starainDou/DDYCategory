@@ -63,6 +63,7 @@
 		A481C8B020FEED500052691B /* UIView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88620FEED500052691B /* UIView+LinkBlock.m */; };
 		A481C8B120FEED500052691B /* UIViewController+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88820FEED500052691B /* UIViewController+LinkBlock.m */; };
 		A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */; };
+		A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,6 +181,8 @@
 		A481C88820FEED500052691B /* UIViewController+LinkBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LinkBlock.m"; sourceTree = "<group>"; };
 		A481C88920FEED500052691B /* UIWebView+LinkBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+LinkBlock.h"; sourceTree = "<group>"; };
 		A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+LinkBlock.m"; sourceTree = "<group>"; };
+		A481C95921016FDA0052691B /* UITextView+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+DDYExtension.h"; sourceTree = "<group>"; };
+		A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,7 @@
 		A481C6F220F5BADE0052691B /* DDYCategory */ = {
 			isa = PBXGroup;
 			children = (
+				A481C95621016ECF0052691B /* DDYTools */,
 				A481C83320FEED4F0052691B /* LinkBlockKit */,
 				A481C71420F5BB430052691B /* DDYCategory */,
 				A481C70620F5BB170052691B /* System */,
@@ -256,6 +260,8 @@
 				A481C76720F85E340052691B /* UIImage+DDYExtension.m */,
 				A481C77220F8A4640052691B /* UITextField+DDYExtension.h */,
 				A481C77320F8A4640052691B /* UITextField+DDYExtension.m */,
+				A481C95921016FDA0052691B /* UITextView+DDYExtension.h */,
+				A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */,
 				A481C76920F871440052691B /* UIColor+DDYExtension.h */,
 				A481C76A20F871440052691B /* UIColor+DDYExtension.m */,
 				A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */,
@@ -401,6 +407,21 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		A481C95621016ECF0052691B /* DDYTools */ = {
+			isa = PBXGroup;
+			children = (
+				A481C95721016EFD0052691B /* UIKit */,
+			);
+			path = DDYTools;
+			sourceTree = "<group>";
+		};
+		A481C95721016EFD0052691B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,6 +512,7 @@
 				A481C77420F8A4640052691B /* UITextField+DDYExtension.m in Sources */,
 				A481C8AC20FEED500052691B /* UISearchBar+LinkBlock.m in Sources */,
 				A481C8A220FEED500052691B /* CALayer+LinkBlock.m in Sources */,
+				A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */,
 				A481C88F20FEED500052691B /* NSAttributedString+LinkBlock.m in Sources */,
 				A481C89B20FEED500052691B /* NSValue+LinkBlock.m in Sources */,
 				A481C89320FEED500052691B /* NSMutableArray+LinkBlock.m in Sources */,

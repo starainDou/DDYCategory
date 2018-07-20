@@ -20,9 +20,12 @@ typedef void(^DDYButtonTouchUpInsideBlock) (UIButton *sender);
 @property (nonatomic, assign) DDYBtnStyle btnStyle;
 /** 图文间距 */
 @property (nonatomic, assign) CGFloat padding;
-
+/** 快速同时设置布局方式和图文间距 图文都存在才有效 */
 - (void)ddy_SetStyle:(DDYBtnStyle)style padding:(CGFloat)padding;
-
+/** 用block替代-addTarget:action:forControlEvents:UIControlEventTouchUpInside */
 - (void)ddy_TouchUpInsideBlock:(DDYButtonTouchUpInsideBlock)block;
+/** 使用颜色设置按钮背景 */
+- (void)ddy_BackgroundColor:(UIColor *)bgColor forState:(UIControlState)state;
+
 
 @end

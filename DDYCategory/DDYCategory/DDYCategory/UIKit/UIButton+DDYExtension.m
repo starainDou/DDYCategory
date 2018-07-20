@@ -1,5 +1,6 @@
 #import "UIButton+DDYExtension.h"
 #import "UIView+DDYExtension.h"
+#import "UIImage+DDYExtension.h"
 #import <objc/runtime.h>
 
 @implementation UIButton (DDYExtension)
@@ -138,5 +139,9 @@
     block(sender);
 }
 
+#pragma mark 使用颜色设置按钮背景
+- (void)ddy_BackgroundColor:(UIColor *)bgColor forState:(UIControlState)state {
+    [self setBackgroundImage:[UIImage ddy_RectImageWithColor:bgColor size:CGSizeMake(1, 1)] forState:state];
+}
 
 @end

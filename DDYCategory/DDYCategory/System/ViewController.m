@@ -26,13 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _img = [self circleImageWithColor:[UIColor ddy_ColorWithHexString:@"#00FFFF"] radius:10];
-    NSMutableDictionary
     [self btn:10  style:DDYBtnStyleImgLeft  padding:10];
     [self btn:80  style:DDYBtnStyleImgRight padding:10];
     [self btn:150 style:DDYBtnStyleImgTop   padding:10];
     [self btn:220 style:DDYBtnStyleImgDown  padding:10];
     
-    UIViewNew.viewSetFrame(10, DDYTopH + 80, DDYScreenW-20, 30).viewBGColor([UIColor redColor]).viewAddToView(self.view);
+    [self testLinkBlock];
+    [self testTextView];
 }
 
 - (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding {
@@ -48,6 +48,19 @@
     [button addTarget:self action:@selector(handleBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     return button;
+}
+
+- (void)testLinkBlock {
+    UIViewNew.viewSetFrame(10, DDYTopH + 80, DDYScreenW-20, 30).viewBGColor([UIColor redColor]).viewAddToView(self.view);
+}
+
+- (void)testTextView {
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, DDYTopH+120, DDYScreenW-20, 100)];
+    textView.placeholder = @"大哥，我是来占位！！！";
+    textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    textView.layer.borderColor = [UIColor blackColor].CGColor;
+    textView.layer.borderWidth = 1;
+    [self.view addSubview:textView];
 }
 
 - (void)handleBtn {
