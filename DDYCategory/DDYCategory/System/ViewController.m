@@ -30,16 +30,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _img = [self circleImageWithColor:[UIColor ddy_ColorWithHexString:@"#00FFFF"] radius:10];
-    [self btn:10  style:DDYBtnStyleImgLeft  padding:10];
-    [self btn:80  style:DDYBtnStyleImgRight padding:10];
-    [self btn:150 style:DDYBtnStyleImgTop   padding:10];
-    [self btn:220 style:DDYBtnStyleImgDown  padding:10];
+    [self btn:10  style:DDYBtnStyleImgLeft  padding:10 tag:101];
+    [self btn:80  style:DDYBtnStyleImgRight padding:10 tag:102];
+    [self btn:150 style:DDYBtnStyleImgTop   padding:10 tag:103];
+    [self btn:220 style:DDYBtnStyleImgDown  padding:10 tag:104];
     
     [self testLinkBlock];
     [self testTextView];
 }
 
-- (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding {
+- (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding tag:(NSUInteger)tag {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"title" forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
@@ -49,7 +49,8 @@
     [button ddy_SetStyle:style padding:padding];
     [button setFrame:CGRectMake(x, DDYTopH+10, 60, 60)];
     [button setIsShowHitTestLog:YES];
-    [button addTarget:self action:@selector(handleBtn) forControlEvents:UIControlEventTouchUpInside];
+    [button setTag:tag];
+    [button addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     return button;
 }
@@ -98,14 +99,24 @@
     
 }
 
-- (void)handleBtn {
-    [UIAlertView ddy_AlertTitle:@"0"
-                        message:@"1"
-                    cancelTitle:@"Cancel"
-                     otherTitle:@"OK"
-                clickIndexBlock:^(UIAlertView *alertView, NSInteger index) {
-                    NSLog(@"%d", (int)index);
-    }];
+- (void)handleBtn:(UIButton *)sender {
+    if (sender.tag == 101) {
+        [UIAlertView ddy_AlertTitle:@"T" message:@"M" cancelTitle:@"0" otherTitle:@"1" clickIndexBlock:^(UIAlertView *alertView, NSInteger index) {
+            NSLog(@"%d", (int)index);
+        }];
+    }
+    if (sender.tag == 102) {
+        [self ddy_navigationBarAlpha:0];
+    }
+    if (sender.tag == 103) {
+        [self ddy_navigationBarAlpha:0.5];
+        [self ddy_bottomLineHidden:YES];
+    }
+    if (sender.tag == 104) {
+        [self ddy_navigationBarAlpha:1];
+        [self ddy_bottomLineHidden:NO];        
+    }
+    
 }
 
 #pragma mark 绘制圆形图片

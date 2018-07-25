@@ -65,4 +65,8 @@
 /** 是否打印hitTest日志 */
 @property (nonatomic, assign) BOOL isShowHitTestLog;
 
+#pragma mark - ---------------- 特效 ------------------
+/** 破碎效果 */
+- (void)ddy_CrushEffectWithCellWidth:(CGFloat)cellW;
+
 @end

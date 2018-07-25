@@ -382,7 +382,7 @@
 
 - (UIView *)ddy_HitTest:(CGPoint)point withEvent:(UIEvent *)event {
     UIView *view = [self ddy_HitTest:point withEvent:event];
-    if (self.isShowHitTestLog) {
+    if (self.isShowHitTestLog && view) {
         NSLog(@"  UIView+DDYExtension:%d %s [self class]%@ [hitView class]:%@", __LINE__, __FUNCTION__, [self class], [view class]);
     }
     return view;
@@ -398,5 +398,15 @@
     objc_setAssociatedObject(self, "ddyHitTestLogKey", number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+#pragma mark - 特效
+#pragma mark 破碎效果
+- (void)ddy_CrushEffectWithCellWidth:(CGFloat)cellW {
+    CGSize cellSize = CGSizeMake(cellW, cellW);
+    CGFloat cols = self.ddy_w / cellW;
+    CGFloat rows = self.ddy_h / cellW;
+    int fullCols = floorf(cols);
+    int fullRows = floorf(rows);
+
+}
 
 @end

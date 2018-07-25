@@ -64,6 +64,7 @@
 		A481C8B120FEED500052691B /* UIViewController+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88820FEED500052691B /* UIViewController+LinkBlock.m */; };
 		A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */; };
 		A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */; };
+		A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +184,8 @@
 		A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+LinkBlock.m"; sourceTree = "<group>"; };
 		A481C95921016FDA0052691B /* UITextView+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6731821086F0B0059E1DF /* UIViewController+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +267,8 @@
 				A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */,
 				A481C76920F871440052691B /* UIColor+DDYExtension.h */,
 				A481C76A20F871440052691B /* UIColor+DDYExtension.m */,
+				A4C6731821086F0B0059E1DF /* UIViewController+DDYExtension.h */,
+				A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */,
 				A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */,
 				A481C73120F60E120052691B /* AppDelegate+DDYNotification.m */,
 			);
@@ -531,6 +536,7 @@
 				A481C89920FEED500052691B /* NSString+LinkBlock.m in Sources */,
 				A481C8B120FEED500052691B /* UIViewController+LinkBlock.m in Sources */,
 				A481C89720FEED500052691B /* NSNumber+LinkBlock.m in Sources */,
+				A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */,
 				A481C89020FEED500052691B /* NSDate+LinkBlock.m in Sources */,
 				A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */,
 				A481C89E20FEED500052691B /* LinkGroup.m in Sources */,
