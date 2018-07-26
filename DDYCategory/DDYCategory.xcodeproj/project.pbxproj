@@ -186,6 +186,7 @@
 		A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDYExtension.m"; sourceTree = "<group>"; };
 		A4C6731821086F0B0059E1DF /* UIViewController+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYExtension.h"; sourceTree = "<group>"; };
 		A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6731C21099CAD0059E1DF /* DDYMacrol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYMacrol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,16 +416,9 @@
 		A481C95621016ECF0052691B /* DDYTools */ = {
 			isa = PBXGroup;
 			children = (
-				A481C95721016EFD0052691B /* UIKit */,
+				A4C6731C21099CAD0059E1DF /* DDYMacrol.h */,
 			);
 			path = DDYTools;
-			sourceTree = "<group>";
-		};
-		A481C95721016EFD0052691B /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

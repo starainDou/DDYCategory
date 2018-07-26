@@ -1,7 +1,7 @@
 #import "ViewController.h"
 #import "DDYCategoryHeader.h"
 #import "LinkBlock.h"
-#import <objc/runtime.h>
+#import "DDYMacrol.h"
 
 #ifndef DDYTopH
 #define DDYTopH (self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height)
@@ -107,6 +107,7 @@
     }
     if (sender.tag == 102) {
         [self ddy_navigationBarAlpha:0];
+        DDYInfoLog(@"%d", (int)sender.tag);
     }
     if (sender.tag == 103) {
         [self ddy_navigationBarAlpha:0.5];
