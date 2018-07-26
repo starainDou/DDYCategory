@@ -65,6 +65,7 @@
 		A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */; };
 		A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */; };
 		A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */; };
+		A4C673212109C9020059E1DF /* UIPreviewAction+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,6 +188,8 @@
 		A4C6731821086F0B0059E1DF /* UIViewController+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYExtension.h"; sourceTree = "<group>"; };
 		A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYExtension.m"; sourceTree = "<group>"; };
 		A4C6731C21099CAD0059E1DF /* DDYMacrol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYMacrol.h; sourceTree = "<group>"; };
+		A4C6731F2109C9020059E1DF /* UIPreviewAction+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPreviewAction+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPreviewAction+DDYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +275,8 @@
 				A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */,
 				A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */,
 				A481C73120F60E120052691B /* AppDelegate+DDYNotification.m */,
+				A4C6731F2109C9020059E1DF /* UIPreviewAction+DDYExtension.h */,
+				A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */,
 				A481C89020FEED500052691B /* NSDate+LinkBlock.m in Sources */,
 				A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */,
+				A4C673212109C9020059E1DF /* UIPreviewAction+DDYExtension.m in Sources */,
 				A481C89E20FEED500052691B /* LinkGroup.m in Sources */,
 				A481C89220FEED500052691B /* NSError+LinkBlock.m in Sources */,
 				A481C88B20FEED500052691B /* JSContext+LinkBlock.m in Sources */,

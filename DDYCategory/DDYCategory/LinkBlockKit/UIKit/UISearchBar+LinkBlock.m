@@ -1,5 +1,3 @@
-
-
 #import "LinkBlock.h"
 
 @implementation NSObject(UISearchBarLinkBlock)

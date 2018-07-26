@@ -1,9 +1,3 @@
-
-
-
-
-
-
 #import "LinkBlockDefine.h"
 
 @interface NSObject(UIControlLinkBlock)

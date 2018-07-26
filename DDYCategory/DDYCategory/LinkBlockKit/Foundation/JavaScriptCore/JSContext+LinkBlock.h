@@ -1,4 +1,3 @@
-
 #import "LinkBlockDefine.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 

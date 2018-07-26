@@ -1,6 +1,3 @@
-
-
-
 #import "LinkBlock.h"
 
 @implementation NSObject(UITableViewLinkBlock)

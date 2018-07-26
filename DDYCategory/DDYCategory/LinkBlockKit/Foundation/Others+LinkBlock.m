@@ -1,7 +1,3 @@
-
-
-
-
 #import "LinkBlock.h"
 
 @implementation NSObject(OtherLinkBlock)

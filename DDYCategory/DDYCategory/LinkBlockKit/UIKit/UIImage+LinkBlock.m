@@ -1,5 +1,3 @@
-
-
 #import "LinkBlock.h"
 #import <Accelerate/Accelerate.h>
 

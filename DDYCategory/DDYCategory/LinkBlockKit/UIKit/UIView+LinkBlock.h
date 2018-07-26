@@ -1,6 +1,3 @@
-
-
-
 #import "LinkBlockDefine.h"
 
 #ifndef UIViewNew

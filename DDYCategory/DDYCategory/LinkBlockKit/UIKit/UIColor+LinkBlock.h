@@ -1,6 +1,3 @@
-
-
-
 #import "LinkBlockDefine.h"
 
 @interface NSObject(UIColorLinkBlock)
