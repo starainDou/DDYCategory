@@ -12,6 +12,9 @@
 - (void)ddy_navigationTitle:(NSString *)title;
 /** 设置标题富文本属性 如:@{NSFontAttributeName:[UIFont systemFontOfSize:19], NSForegroundColorAttributeName:[UIColor redColor]} */
 - (void)ddy_navigationTitleAttributes:(NSDictionary<NSAttributedStringKey,id> * _Nullable)attributes;
+/** Y点移动 */
+- (void)ddy_NavigationBarTranslationY:(CGFloat)translationY;
+
 /** 打印控制器跳转路径 */
 + (void)ddy_ShowPathLog:(BOOL)show;
 

@@ -2,6 +2,7 @@
 #import "DDYCategoryHeader.h"
 #import "LinkBlock.h"
 #import "DDYMacrol.h"
+#import "DDYTestNavigationVC.h"
 
 #ifndef DDYTopH
 #define DDYTopH (self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height)
@@ -34,7 +35,7 @@
     [self btn:80  style:DDYBtnStyleImgRight padding:10 tag:102];
     [self btn:150 style:DDYBtnStyleImgTop   padding:10 tag:103];
     [self btn:220 style:DDYBtnStyleImgDown  padding:10 tag:104];
-    
+    [self btn:290 style:DDYBtnStyleNaturalImgRight  padding:10 tag:105];
     [self testLinkBlock];
     [self testTextView];
 }
@@ -116,6 +117,9 @@
     if (sender.tag == 104) {
         [self ddy_navigationBarAlpha:1];
         [self ddy_bottomLineHidden:NO];        
+    }
+    if(sender.tag == 105) {
+        [self.navigationController pushViewController:[DDYTestNavigationVC new] animated:YES];
     }
     
 }

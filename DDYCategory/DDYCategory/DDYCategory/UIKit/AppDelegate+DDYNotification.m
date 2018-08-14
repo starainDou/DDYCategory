@@ -10,7 +10,7 @@
     // NSSelectorFromString(@"methodName") 或 @selector(methodName);
     // 交换启动方法
 //    [self changeOrignalSEL:@selector(application:didFinishLaunchingWithOptions:)
-//                swizzleSEL:@selector(ddy_Application:didFinishLaunchingWithOptions:)];
+//                swizzleSEL:@selector(ddy_NotificationApplication:didFinishLaunchingWithOptions:)];
 }
 
 + (void)changeOrignalSEL:(SEL)orignalSEL swizzleSEL:(SEL)swizzleSEL {
@@ -34,7 +34,7 @@
 
 #pragma mark - 1.注册通知
 #pragma mark 在程序启动后注册通知
-- (BOOL)ddy_Application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)ddy_NotificationApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 程序是关闭(杀死)还是本身就是活跃(前台或挂起) 然后被通知打开
     NSDictionary *remoteNotification = [launchOptions objectForKey:@"UIApplicationLaunchOptionsRemoteNotificationKey"];
     self.launchedByNotification = (remoteNotification == nil ? NO : YES);
@@ -43,7 +43,8 @@
     // 本地通知
     [self registerLocalNotificationWithAlertTime:5];
 
-    return [self ddy_Application:application didFinishLaunchingWithOptions:launchOptions];
+    return YES;
+//    return [self ddy_NotificationApplication:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 #pragma mark 远程推送通知

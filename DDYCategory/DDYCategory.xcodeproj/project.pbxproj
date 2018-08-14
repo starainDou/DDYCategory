@@ -66,6 +66,20 @@
 		A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */; };
 		A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */; };
 		A4C673212109C9020059E1DF /* UIPreviewAction+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */; };
+		A4C67328210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67327210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m */; };
+		A4C6732A210AF0E00059E1DF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C67329210AF0E00059E1DF /* qrcode.png */; };
+		A4C6735C210B290A0059E1DF /* DDYTestNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6735B210B290A0059E1DF /* DDYTestNavigationVC.m */; };
+		A4DE088E21226E310073CEA1 /* NSArray+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE088D21226E310073CEA1 /* NSArray+DDYSafe.m */; };
+		A4DE089121226E490073CEA1 /* NSDictionary+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE089021226E490073CEA1 /* NSDictionary+DDYSafe.m */; };
+		A4DE089421226E600073CEA1 /* NSString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE089321226E600073CEA1 /* NSString+DDYSafe.m */; };
+		A4DE089721226E710073CEA1 /* NSNull+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE089621226E710073CEA1 /* NSNull+DDYSafe.m */; };
+		A4DE089A21226FA30073CEA1 /* NSObject+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE089921226FA30073CEA1 /* NSObject+DDYSafe.m */; };
+		A4DE089D212287D80073CEA1 /* DDYSafeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE089C212287D80073CEA1 /* DDYSafeHeader.m */; };
+		A4DE08A0212288A60073CEA1 /* NSMutableArray+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE089F212288A60073CEA1 /* NSMutableArray+DDYSafe.m */; };
+		A4DE08A3212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08A2212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.m */; };
+		A4DE08A6212288F40073CEA1 /* NSMutableString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08A5212288F40073CEA1 /* NSMutableString+DDYSafe.m */; };
+		A4DE08AF2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */; };
+		A4DE08B22122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +204,33 @@
 		A4C6731C21099CAD0059E1DF /* DDYMacrol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYMacrol.h; sourceTree = "<group>"; };
 		A4C6731F2109C9020059E1DF /* UIPreviewAction+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPreviewAction+DDYExtension.h"; sourceTree = "<group>"; };
 		A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPreviewAction+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C67326210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DDY3DTouch.h"; sourceTree = "<group>"; };
+		A4C67327210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DDY3DTouch.m"; sourceTree = "<group>"; };
+		A4C67329210AF0E00059E1DF /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
+		A4C6735A210B290A0059E1DF /* DDYTestNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYTestNavigationVC.h; sourceTree = "<group>"; };
+		A4C6735B210B290A0059E1DF /* DDYTestNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYTestNavigationVC.m; sourceTree = "<group>"; };
+		A4DE088C21226E310073CEA1 /* NSArray+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE088D21226E310073CEA1 /* NSArray+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE088F21226E490073CEA1 /* NSDictionary+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE089021226E490073CEA1 /* NSDictionary+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE089221226E600073CEA1 /* NSString+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE089321226E600073CEA1 /* NSString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE089521226E710073CEA1 /* NSNull+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNull+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE089621226E710073CEA1 /* NSNull+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNull+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE089821226FA30073CEA1 /* NSObject+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE089921226FA30073CEA1 /* NSObject+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE089B212287D80073CEA1 /* DDYSafeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYSafeHeader.h; sourceTree = "<group>"; };
+		A4DE089C212287D80073CEA1 /* DDYSafeHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYSafeHeader.m; sourceTree = "<group>"; };
+		A4DE089E212288A60073CEA1 /* NSMutableArray+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE089F212288A60073CEA1 /* NSMutableArray+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE08A1212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE08A2212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE08A4212288F40073CEA1 /* NSMutableString+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE08A5212288F40073CEA1 /* NSMutableString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE08AD2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE08B02122B9CD0073CEA1 /* NSAttributedString+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DDYSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +263,7 @@
 		A481C6F220F5BADE0052691B /* DDYCategory */ = {
 			isa = PBXGroup;
 			children = (
+				A4DE088B21226D880073CEA1 /* DDYSafe */,
 				A481C95621016ECF0052691B /* DDYTools */,
 				A481C83320FEED4F0052691B /* LinkBlockKit */,
 				A481C71420F5BB430052691B /* DDYCategory */,
@@ -233,6 +275,7 @@
 		A481C70620F5BB170052691B /* System */ = {
 			isa = PBXGroup;
 			children = (
+				A4C67329210AF0E00059E1DF /* qrcode.png */,
 				A481C70720F5BB170052691B /* AppDelegate.h */,
 				A481C70820F5BB170052691B /* AppDelegate.m */,
 				A481C70920F5BB170052691B /* LaunchScreen.storyboard */,
@@ -240,6 +283,8 @@
 				A481C70C20F5BB170052691B /* main.m */,
 				A481C70D20F5BB170052691B /* ViewController.h */,
 				A481C70E20F5BB170052691B /* ViewController.m */,
+				A4C6735A210B290A0059E1DF /* DDYTestNavigationVC.h */,
+				A4C6735B210B290A0059E1DF /* DDYTestNavigationVC.m */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -275,6 +320,8 @@
 				A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */,
 				A481C73020F60E120052691B /* AppDelegate+DDYNotification.h */,
 				A481C73120F60E120052691B /* AppDelegate+DDYNotification.m */,
+				A4C67326210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.h */,
+				A4C67327210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m */,
 				A4C6731F2109C9020059E1DF /* UIPreviewAction+DDYExtension.h */,
 				A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */,
 			);
@@ -426,6 +473,35 @@
 			path = DDYTools;
 			sourceTree = "<group>";
 		};
+		A4DE088B21226D880073CEA1 /* DDYSafe */ = {
+			isa = PBXGroup;
+			children = (
+				A4DE089B212287D80073CEA1 /* DDYSafeHeader.h */,
+				A4DE089C212287D80073CEA1 /* DDYSafeHeader.m */,
+				A4DE089821226FA30073CEA1 /* NSObject+DDYSafe.h */,
+				A4DE089921226FA30073CEA1 /* NSObject+DDYSafe.m */,
+				A4DE088C21226E310073CEA1 /* NSArray+DDYSafe.h */,
+				A4DE088D21226E310073CEA1 /* NSArray+DDYSafe.m */,
+				A4DE089E212288A60073CEA1 /* NSMutableArray+DDYSafe.h */,
+				A4DE089F212288A60073CEA1 /* NSMutableArray+DDYSafe.m */,
+				A4DE088F21226E490073CEA1 /* NSDictionary+DDYSafe.h */,
+				A4DE089021226E490073CEA1 /* NSDictionary+DDYSafe.m */,
+				A4DE08A1212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.h */,
+				A4DE08A2212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.m */,
+				A4DE089221226E600073CEA1 /* NSString+DDYSafe.h */,
+				A4DE089321226E600073CEA1 /* NSString+DDYSafe.m */,
+				A4DE08A4212288F40073CEA1 /* NSMutableString+DDYSafe.h */,
+				A4DE08A5212288F40073CEA1 /* NSMutableString+DDYSafe.m */,
+				A4DE08B02122B9CD0073CEA1 /* NSAttributedString+DDYSafe.h */,
+				A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */,
+				A4DE08AD2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.h */,
+				A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */,
+				A4DE089521226E710073CEA1 /* NSNull+DDYSafe.h */,
+				A4DE089621226E710073CEA1 /* NSNull+DDYSafe.m */,
+			);
+			path = DDYSafe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C6732A210AF0E00059E1DF /* qrcode.png in Resources */,
 				A481C71120F5BB170052691B /* Info.plist in Resources */,
 				A481C71020F5BB170052691B /* LaunchScreen.storyboard in Resources */,
 			);
@@ -500,35 +577,46 @@
 				A481C89120FEED500052691B /* NSDictionary+LinkBlock.m in Sources */,
 				A481C8A420FEED500052691B /* UIBezierPath+LinkBlock.m in Sources */,
 				A481C76E20F891D70052691B /* NSTimer+DDYExtension.m in Sources */,
+				A4C67328210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m in Sources */,
+				A4DE089421226E600073CEA1 /* NSString+DDYSafe.m in Sources */,
 				A481C8A620FEED500052691B /* UIColor+LinkBlock.m in Sources */,
 				A481C88D20FEED500052691B /* JSValue+LinkBlock.m in Sources */,
 				A481C8A720FEED500052691B /* UIControl+LinkBlock.m in Sources */,
 				A481C8AD20FEED500052691B /* UITableView+LinkBlock.m in Sources */,
 				A481C89620FEED500052691B /* NSMutableString+LinkBlock.m in Sources */,
+				A4DE089D212287D80073CEA1 /* DDYSafeHeader.m in Sources */,
 				A481C8A120FEED500052691B /* CAAnimations+LinkBlock.m in Sources */,
 				A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */,
 				A481C71320F5BB170052691B /* ViewController.m in Sources */,
 				A481C8A820FEED500052691B /* UIImage+LinkBlock.m in Sources */,
+				A4DE08A6212288F40073CEA1 /* NSMutableString+DDYSafe.m in Sources */,
 				A481C8AF20FEED500052691B /* UITextView+LinkBlock.m in Sources */,
 				A481C8B020FEED500052691B /* UIView+LinkBlock.m in Sources */,
 				A481C89C20FEED500052691B /* Others+LinkBlock.m in Sources */,
 				A481C89A20FEED500052691B /* NSURL+LinkBlock.m in Sources */,
+				A4DE08B22122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m in Sources */,
 				A481C77420F8A4640052691B /* UITextField+DDYExtension.m in Sources */,
+				A4DE08A0212288A60073CEA1 /* NSMutableArray+DDYSafe.m in Sources */,
 				A481C8AC20FEED500052691B /* UISearchBar+LinkBlock.m in Sources */,
 				A481C8A220FEED500052691B /* CALayer+LinkBlock.m in Sources */,
 				A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */,
+				A4DE088E21226E310073CEA1 /* NSArray+DDYSafe.m in Sources */,
 				A481C88F20FEED500052691B /* NSAttributedString+LinkBlock.m in Sources */,
 				A481C89B20FEED500052691B /* NSValue+LinkBlock.m in Sources */,
 				A481C89320FEED500052691B /* NSMutableArray+LinkBlock.m in Sources */,
+				A4DE08AF2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m in Sources */,
 				A481C72B20F5E9BA0052691B /* NSString+DDYExtension.m in Sources */,
 				A481C8AA20FEED500052691B /* UILabel+LinkBlock.m in Sources */,
 				A481C72620F5E4EF0052691B /* UIButton+DDYExtension.m in Sources */,
+				A4DE089721226E710073CEA1 /* NSNull+DDYSafe.m in Sources */,
 				A481C72720F5E4EF0052691B /* UIView+DDYExtension.m in Sources */,
 				A481C8AB20FEED500052691B /* UIScrollView+LinkBlock.m in Sources */,
+				A4DE089121226E490073CEA1 /* NSDictionary+DDYSafe.m in Sources */,
 				A481C76820F85E340052691B /* UIImage+DDYExtension.m in Sources */,
 				A481C89520FEED500052691B /* NSMutableDictionary+LinkBlock.m in Sources */,
 				A481C71220F5BB170052691B /* main.m in Sources */,
 				A481C89D20FEED500052691B /* LinkError.m in Sources */,
+				A4DE08A3212288BC0073CEA1 /* NSMutableDictionary+DDYSafe.m in Sources */,
 				A481C89820FEED500052691B /* NSObject+LinkBlock.m in Sources */,
 				A481C70F20F5BB170052691B /* AppDelegate.m in Sources */,
 				A481C8A920FEED500052691B /* UIImageView+LinkBlock.m in Sources */,
@@ -538,12 +626,14 @@
 				A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */,
 				A481C89020FEED500052691B /* NSDate+LinkBlock.m in Sources */,
 				A481C76B20F871440052691B /* UIColor+DDYExtension.m in Sources */,
+				A4DE089A21226FA30073CEA1 /* NSObject+DDYSafe.m in Sources */,
 				A4C673212109C9020059E1DF /* UIPreviewAction+DDYExtension.m in Sources */,
 				A481C89E20FEED500052691B /* LinkGroup.m in Sources */,
 				A481C89220FEED500052691B /* NSError+LinkBlock.m in Sources */,
 				A481C88B20FEED500052691B /* JSContext+LinkBlock.m in Sources */,
 				A481C8A520FEED500052691B /* UIButton+LinkBlock.m in Sources */,
 				A481C77720F8AF230052691B /* NSArray+DDYExtension.m in Sources */,
+				A4C6735C210B290A0059E1DF /* DDYTestNavigationVC.m in Sources */,
 				A481C89F20FEED500052691B /* LinkInfo.m in Sources */,
 				A481C8A320FEED500052691B /* CAShapeLayer+LinkBlock.m in Sources */,
 				A481C72E20F5F7300052691B /* keccak.c in Sources */,

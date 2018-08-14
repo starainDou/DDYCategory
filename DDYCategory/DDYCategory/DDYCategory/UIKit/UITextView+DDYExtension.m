@@ -10,7 +10,10 @@
 @implementation UITextView (DDYExtension)
 
 + (void)load {
-    [self changeOrignalSEL:NSSelectorFromString(@"dealloc") swizzleSEL:@selector(ddy_dealloc)];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+       [self changeOrignalSEL:NSSelectorFromString(@"dealloc") swizzleSEL:@selector(ddy_dealloc)];
+    });
 }
 
 + (void)changeOrignalSEL:(SEL)orignalSEL swizzleSEL:(SEL)swizzleSEL {
@@ -116,12 +119,17 @@
     + self.textContainerInset.right
     + self.textContainer.lineFragmentPadding
     + self.textContainer.lineFragmentPadding;
+    
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineBreakMode = self.textContainer.lineBreakMode;
     
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    if (self.font) attributes[NSFontAttributeName] = self.font;
+    attributes[NSParagraphStyleAttributeName] = paragraphStyle;
+    
     return [self.text boundingRectWithSize:CGSizeMake(self.bounds.size.width - boardMargin, MAXFLOAT)
-                                   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                attributes:@{NSFontAttributeName:self.font, NSParagraphStyleAttributeName:paragraphStyle}
+                                   options:NSStringDrawingUsesLineFragmentOrigin
+                                attributes:attributes
                                    context:nil].size;
 }
 

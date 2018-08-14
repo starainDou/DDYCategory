@@ -74,6 +74,11 @@ static BOOL isShowPathLog;
     [self ddy_ViewDidAppear:animated];
 }
 
+#pragma mark Y点移动
+- (void)ddy_NavigationBarTranslationY:(CGFloat)translationY {
+    self.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0, translationY);
+}
+
 #pragma mark 打印控制器跳转路径
 + (void)ddy_ShowPathLog:(BOOL)show {
     isShowPathLog = show;
