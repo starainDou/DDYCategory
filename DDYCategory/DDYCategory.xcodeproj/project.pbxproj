@@ -80,6 +80,7 @@
 		A4DE08A6212288F40073CEA1 /* NSMutableString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08A5212288F40073CEA1 /* NSMutableString+DDYSafe.m */; };
 		A4DE08AF2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */; };
 		A4DE08B22122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */; };
+		A4DE08B62122E9B00073CEA1 /* UIView+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08B52122E9B00073CEA1 /* UIView+DDYSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -231,6 +232,8 @@
 		A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+DDYSafe.m"; sourceTree = "<group>"; };
 		A4DE08B02122B9CD0073CEA1 /* NSAttributedString+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DDYSafe.h"; sourceTree = "<group>"; };
 		A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE08B42122E9B00073CEA1 /* UIView+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE08B52122E9B00073CEA1 /* UIView+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDYSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +501,8 @@
 				A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */,
 				A4DE089521226E710073CEA1 /* NSNull+DDYSafe.h */,
 				A4DE089621226E710073CEA1 /* NSNull+DDYSafe.m */,
+				A4DE08B42122E9B00073CEA1 /* UIView+DDYSafe.h */,
+				A4DE08B52122E9B00073CEA1 /* UIView+DDYSafe.m */,
 			);
 			path = DDYSafe;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				A481C77420F8A4640052691B /* UITextField+DDYExtension.m in Sources */,
 				A4DE08A0212288A60073CEA1 /* NSMutableArray+DDYSafe.m in Sources */,
 				A481C8AC20FEED500052691B /* UISearchBar+LinkBlock.m in Sources */,
+				A4DE08B62122E9B00073CEA1 /* UIView+DDYSafe.m in Sources */,
 				A481C8A220FEED500052691B /* CALayer+LinkBlock.m in Sources */,
 				A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */,
 				A4DE088E21226E310073CEA1 /* NSArray+DDYSafe.m in Sources */,

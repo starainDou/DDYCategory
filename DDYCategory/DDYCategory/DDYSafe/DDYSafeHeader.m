@@ -10,6 +10,8 @@ NSString *const DDYSafeRemoveNil = @"DDYSafe remove nil to avoid crash";
 NSString *const DDYSafeIgnore = @"DDYSafe ignore the operation to avoid crash";
 // 消息转发来防止崩溃
 NSString *const DDYSafeForward = @"DDYSafe forward invocation to avoid crash";
+// 返回主线程防止崩溃
+NSString *const DDYSafeMainThread = @"DDYSafe return main thread to avoid crash";
 // 崩溃堆栈信息
 NSString *const DDYSafeCrashStack = @"DDYSafeCrashStack";
 // 异常信息

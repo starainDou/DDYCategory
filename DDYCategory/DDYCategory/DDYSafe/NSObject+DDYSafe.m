@@ -8,17 +8,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // !!!: setValue:forKey:
-        [self ddy_SwapMethod:@selector(setValue:forKey:) swizzleSel:@selector(ddy_SetValue:forKey:)];
+        [[self class] ddy_SwapMethod:@selector(setValue:forKey:) swizzleSel:@selector(ddy_SetValue:forKey:)];
         // !!!: setValue:forKeyPath:
-        [self ddy_SwapMethod:@selector(setValue:forKeyPath:) swizzleSel:@selector(ddy_SetValue:forKeyPath:)];
+        [[self class] ddy_SwapMethod:@selector(setValue:forKeyPath:) swizzleSel:@selector(ddy_SetValue:forKeyPath:)];
         // !!!: setValue:forUndefineKey:
-        [self ddy_SwapMethod:@selector(setValue:forUndefinedKey:) swizzleSel:@selector(ddy_SetValue:forUndefinedKey:)];
+        [[self class] ddy_SwapMethod:@selector(setValue:forUndefinedKey:) swizzleSel:@selector(ddy_SetValue:forUndefinedKey:)];
         // !!!: setValuesForKeysWithDictionary:
-        [self ddy_SwapMethod:@selector(setValuesForKeysWithDictionary:) swizzleSel:@selector(ddy_SetValuesForKeysWithDictionary:)];
+        [[self class] ddy_SwapMethod:@selector(setValuesForKeysWithDictionary:) swizzleSel:@selector(ddy_SetValuesForKeysWithDictionary:)];
         // !!!: methodSignatureForSelector:
-        [self ddy_SwapMethod:@selector(methodSignatureForSelector:) swizzleSel:@selector(ddy_MethodSignatureForSelector:)];
+        [[self class] ddy_SwapMethod:@selector(methodSignatureForSelector:) swizzleSel:@selector(ddy_MethodSignatureForSelector:)];
         // !!!: forwardInvocation:
-        [self ddy_SwapMethod:@selector(forwardInvocation:) swizzleSel:@selector(ddy_ForwardInvocation:)];
+        [[self class] ddy_SwapMethod:@selector(forwardInvocation:) swizzleSel:@selector(ddy_ForwardInvocation:)];
     });
 }
 

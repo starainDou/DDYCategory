@@ -26,6 +26,8 @@ extern NSString *const DDYSafeRemoveNil;
 extern NSString *const DDYSafeIgnore;
 // 消息转发来防止崩溃
 extern NSString *const DDYSafeForward;
+// 返回主线程防止崩溃
+extern NSString *const DDYSafeMainThread;
 // 崩溃堆栈信息
 extern NSString *const DDYSafeCrashStack;
 // 异常信息
