@@ -119,7 +119,10 @@
         [self ddy_bottomLineHidden:NO];        
     }
     if(sender.tag == 105) {
-        [self.navigationController pushViewController:[DDYTestNavigationVC new] animated:YES];
+        // 制造崩溃
+        NSDictionary *dict = [NSDictionary dictionary];
+        NSString *nilString = nil;
+        [dict setValue:nilString forKey:nilString];
     }
     
 }

@@ -68,6 +68,8 @@ const int32_t UncaughtExceptionMaximum = 100;
 
 #pragma mark 处理异常
 void HandleException(NSException *exception) {
+    saveOrUploadException(exception);
+    
     int32_t exceptionCount = OSAtomicIncrement32(&UncaughtExceptionCount);
     // 如果太多不用处理
     if (exceptionCount > UncaughtExceptionMaximum) {
@@ -76,8 +78,10 @@ void HandleException(NSException *exception) {
     
     CFRunLoopRef runLoop = CFRunLoopGetCurrent();
     CFArrayRef allModes = CFRunLoopCopyAllModes(runLoop);
+    NSArray *allModeArray = (__bridge NSArray *)allModes;
+    CFRelease(allModes);
     while (1) {
-        for (NSString *mode in (__bridge NSArray *)allModes) {
+        for (NSString *mode in allModeArray) {
             CFRunLoopRunInMode((CFStringRef)mode, 0.001, false);
         }
     }
@@ -133,6 +137,11 @@ NSArray *getAddressKey() {
     }
     free(strs);
     return backtrace;
+}
+
+#pragma mark 保存或者上传日志
+void saveOrUploadException() {
+    
 }
 
 @end

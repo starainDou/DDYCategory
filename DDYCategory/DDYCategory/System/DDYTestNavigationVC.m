@@ -13,6 +13,11 @@
     self.tableView.rowHeight = 60;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self ddy_navigationBackgroundColor:[UIColor whiteColor]];
+    [self updateProgress:0];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offsetY = scrollView.contentOffset.y;
