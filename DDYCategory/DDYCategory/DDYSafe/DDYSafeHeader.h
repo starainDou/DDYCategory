@@ -40,6 +40,10 @@ extern NSString *const DDYSafeSolution;
 
 @interface DDYSafeHeader : NSObject
 
+/** 安全守护，旨在预防 */
 + (void)ddy_SafeEffective;
+
+/** 崩溃发生，防止闪退 */
++ (void)ddy_HandleUncaughtException;
 
 @end
