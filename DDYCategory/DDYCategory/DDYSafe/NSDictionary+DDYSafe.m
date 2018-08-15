@@ -7,10 +7,12 @@
 + (void)ddy_SafeEffect {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        // MARK: dictionaryWithObjects:forKeys:count:
         [self ddy_SwapClassMethod:@selector(dictionaryWithObjects:forKeys:count:) swizzleSel:@selector(ddy_DictionaryWithObjects:forKeys:count:)];
     });
 }
 
+#pragma mark dictionaryWithObjects:forKeys:count:
 + (instancetype)ddy_DictionaryWithObjects:(id  _Nonnull const [])objects forKeys:(id<NSCopying>  _Nonnull const [])keys count:(NSUInteger)cnt {
     id instance = nil;
     @try {

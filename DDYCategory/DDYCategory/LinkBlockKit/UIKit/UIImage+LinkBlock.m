@@ -285,4 +285,26 @@
         return [_self resizableImageWithCapInsets:UIEdgeInsetsMake(top, left, bottom, right)];
     };
 }
+
+//+ (void)load {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        [self changeOrignalSEL:@selector(imageNamed:) swizzleSEL:ddy_ImageNamed:];
+//    });
+//}
+//
+//+ (void)changeOrignalSEL:(SEL)orignalSEL swizzleSEL:(SEL)swizzleSEL {
+//    Method originalMethod = class_getClassMethod([self class], orignalSEL);
+//    Method swizzleMethod = class_getClassMethod([self class], swizzleSEL);
+//    if (class_addMethod([self class], orignalSEL, method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod))) {
+//        class_replaceMethod([self class], swizzleSEL, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+//    } else {
+//        method_exchangeImplementations(originalMethod, swizzleMethod);
+//    }
+//}
+//
+//+ (nullable UIImage *)ddy_ImageNamed:(NSString *)name {
+//    return [self ddy_ImageNamed:NSLocalizedString(name, nil)]
+//}
+
 @end

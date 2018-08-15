@@ -16,6 +16,9 @@
 #import "NSAttributedString+DDYSafe.h"
 #import "NSMutableAttributedString+DDYSafe.h"
 
+#import "UIView+DDYSafe.h"
+#import "UITableView+DDYSafe.h"
+
 // 崩溃时发送通知
 extern NSString *const DDYSafeNotification;
 // 返回nil来防止崩溃

@@ -81,6 +81,7 @@
 		A4DE08AF2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08AE2122895B0073CEA1 /* NSMutableAttributedString+DDYSafe.m */; };
 		A4DE08B22122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */; };
 		A4DE08B62122E9B00073CEA1 /* UIView+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08B52122E9B00073CEA1 /* UIView+DDYSafe.m */; };
+		A4DE08B92123B2E10073CEA1 /* UITableView+DDYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE08B82123B2E10073CEA1 /* UITableView+DDYSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,6 +235,8 @@
 		A4DE08B12122B9CD0073CEA1 /* NSAttributedString+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DDYSafe.m"; sourceTree = "<group>"; };
 		A4DE08B42122E9B00073CEA1 /* UIView+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DDYSafe.h"; sourceTree = "<group>"; };
 		A4DE08B52122E9B00073CEA1 /* UIView+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDYSafe.m"; sourceTree = "<group>"; };
+		A4DE08B72123B2E10073CEA1 /* UITableView+DDYSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+DDYSafe.h"; sourceTree = "<group>"; };
+		A4DE08B82123B2E10073CEA1 /* UITableView+DDYSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DDYSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +506,8 @@
 				A4DE089621226E710073CEA1 /* NSNull+DDYSafe.m */,
 				A4DE08B42122E9B00073CEA1 /* UIView+DDYSafe.h */,
 				A4DE08B52122E9B00073CEA1 /* UIView+DDYSafe.m */,
+				A4DE08B72123B2E10073CEA1 /* UITableView+DDYSafe.h */,
+				A4DE08B82123B2E10073CEA1 /* UITableView+DDYSafe.m */,
 			);
 			path = DDYSafe;
 			sourceTree = "<group>";
@@ -589,6 +594,7 @@
 				A481C8A720FEED500052691B /* UIControl+LinkBlock.m in Sources */,
 				A481C8AD20FEED500052691B /* UITableView+LinkBlock.m in Sources */,
 				A481C89620FEED500052691B /* NSMutableString+LinkBlock.m in Sources */,
+				A4DE08B92123B2E10073CEA1 /* UITableView+DDYSafe.m in Sources */,
 				A4DE089D212287D80073CEA1 /* DDYSafeHeader.m in Sources */,
 				A481C8A120FEED500052691B /* CAAnimations+LinkBlock.m in Sources */,
 				A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */,

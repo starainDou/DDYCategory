@@ -29,6 +29,7 @@
     });
 }
 
+#pragma mark objectAtIndex:
 - (id)ddy_ObjectAtIndex:(NSUInteger)index {
     id object = nil;
     @try {
@@ -42,6 +43,7 @@
     }
 }
 
+#pragma mark addObject:
 - (void)ddy_AddObject:(id)anObject {
     @try {
         [self ddy_AddObject:anObject];
@@ -54,6 +56,7 @@
     }
 }
 
+#pragma mark objectAtIndexedSubscript:
 - (id)ddy_ObjectAtIndexedSubscript:(NSUInteger)idx {
     id object = nil;
     @try {
@@ -67,6 +70,7 @@
     }
 }
 
+#pragma mark setObject:atIndexedSubscript:
 - (void)ddy_SetObject:(id)obj atIndexedSubscript:(NSUInteger)idx {
     @try {
         [self ddy_SetObject:obj atIndexedSubscript:idx];
@@ -79,6 +83,7 @@
     }
 }
 
+#pragma mark removeObjectAtIndex:
 - (void)ddy_RemoveObjectAtIndex:(NSUInteger)index {
     @try {
         [self ddy_RemoveObjectAtIndex:index];
@@ -91,6 +96,7 @@
     }
 }
 
+#pragma mark removeObjectsInRange:
 - (void)ddy_RemoveObjectsInRange:(NSRange)range {
     @try {
         [self ddy_RemoveObjectsInRange:range];
@@ -103,6 +109,7 @@
     }
 }
 
+#pragma mark insertObject:atIndex:
 - (void)ddy_InsertObject:(id)anObject atIndex:(NSUInteger)index {
     @try {
         [self ddy_InsertObject:anObject atIndex:index];
@@ -115,6 +122,7 @@
     }
 }
 
+#pragma mark getObjects:range:
 - (void)ddy_GetObjects:(__unsafe_unretained id  _Nonnull [])objects range:(NSRange)range {
     @try {
         [self ddy_GetObjects:objects range:range];
@@ -127,6 +135,7 @@
     }
 }
 
+#pragma mark replaceObjectAtIndex:withObject:
 - (void)ddy_ReplaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject {
     @try {
         [self ddy_ReplaceObjectAtIndex:index withObject:anObject];
@@ -140,3 +149,8 @@
 }
 
 @end
+
+/**
+ ???: 什么时候出现不同类型？
+ 见 NSArray+DDYSafe.m
+ */

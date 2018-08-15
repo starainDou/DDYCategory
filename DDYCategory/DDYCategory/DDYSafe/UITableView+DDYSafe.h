@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSAttributedString (DDYSafe)
+@interface UITableView (DDYSafe)
 
 /** 开启安全处理 防止常见崩溃 */
 + (void)ddy_SafeEffect;

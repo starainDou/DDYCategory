@@ -27,6 +27,17 @@ NSString *const DDYSafeSolution = @"DDYSafeSolution";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [NSObject ddy_SafeEffect];
+        [NSArray ddy_SafeEffect];
+        [NSMutableArray ddy_SafeEffect];
+        [NSDictionary ddy_SafeEffect];
+        [NSMutableDictionary ddy_SafeEffect];
+        [NSString ddy_SafeEffect];
+        [NSMutableString ddy_SafeEffect];
+        [NSAttributedString ddy_SafeEffect];
+        [NSMutableAttributedString ddy_SafeEffect];
+        [NSNull ddy_SafeEffect];
+        [UIView ddy_SafeEffect];
+        [UITableView ddy_SafeEffect];
     });
 }
 

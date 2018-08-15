@@ -154,3 +154,23 @@
 
 @end
 
+/**
+ ???: 什么时候出现不同类型？
+ 类簇
+ (lldb) p [NSArray alloc]
+ (__NSPlaceholderArray *) $6 = 0x0000000124d0dfe0
+ (lldb) p [NSArray array]
+ (__NSArray0 *) $7 = 0x0000000124d02000 @"0 elements"
+ (lldb) p [NSArray arrayWithObject:@"1"]
+ (__NSArrayI *) $8 = 0x0000000124d192a0 @"1 element"
+ (lldb) p [NSArray arrayWithObjects:@"1", nil]
+ (__NSArrayI *) $9 = 0x0000000124d192c0 @"1 element"
+ (lldb) p [NSArray arrayWithArray:@[@"1"]]
+ (__NSArrayI *) $10 = 0x0000000124d19300 @"1 element"
+ (lldb) p [NSMutableArray alloc]
+ (__NSPlaceholderArray *) $11 = 0x0000000124d0e1e0
+ (lldb) p [NSMutableArray array]
+ (__NSArrayM *) $12 = 0x0000000124d90cb0 @"0 elements"
+ (lldb) 
+ */
+
