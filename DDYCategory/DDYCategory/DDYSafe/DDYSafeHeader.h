@@ -47,3 +47,8 @@ extern NSString *const DDYSafeSolution;
 + (void)ddy_HandleUncaughtException;
 
 @end
+
+/**
+ !!!:由于不崩溃了,反而影响力三方搜集崩溃信息
+ TODO:利用自定义方式搜集，如bugly的 [BuglyManager reportErrorName:Bugly_ErrorName_AvoidCrash errorReason:errorReason callStack:callStack extraInfo:nil];
+ */
