@@ -18,11 +18,11 @@
     // 监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exceptionNotification:) name:DDYSafeNotification object:nil];
     
-    // 测试打印控制器层级日志
+    // 打印控制器层级日志
     [UIViewController ddy_ShowPathLog:YES];
-    // 测试注册通知
+    // 注册通知
     [self ddy_NotificationApplication:application didFinishLaunchingWithOptions:launchOptions];
-    // 测试3Dtouch快捷启动
+    // 3Dtouch快捷启动
     [self ddy_TouchApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

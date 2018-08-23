@@ -64,6 +64,7 @@
 		A481C8B120FEED500052691B /* UIViewController+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88820FEED500052691B /* UIViewController+LinkBlock.m */; };
 		A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */; };
 		A481C95B21016FDA0052691B /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */; };
+		A4A094D4212E7D2700F807FD /* UINavigationBar+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A094D3212E7D2700F807FD /* UINavigationBar+DDYExtension.m */; };
 		A4C6731A21086F0B0059E1DF /* UIViewController+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */; };
 		A4C673212109C9020059E1DF /* UIPreviewAction+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */; };
 		A4C67328210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67327210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m */; };
@@ -201,6 +202,8 @@
 		A481C88A20FEED500052691B /* UIWebView+LinkBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+LinkBlock.m"; sourceTree = "<group>"; };
 		A481C95921016FDA0052691B /* UITextView+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C95A21016FDA0052691B /* UITextView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDYExtension.m"; sourceTree = "<group>"; };
+		A4A094D2212E7D2600F807FD /* UINavigationBar+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+DDYExtension.h"; sourceTree = "<group>"; };
+		A4A094D3212E7D2700F807FD /* UINavigationBar+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DDYExtension.m"; sourceTree = "<group>"; };
 		A4C6731821086F0B0059E1DF /* UIViewController+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYExtension.h"; sourceTree = "<group>"; };
 		A4C6731921086F0B0059E1DF /* UIViewController+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYExtension.m"; sourceTree = "<group>"; };
 		A4C6731C21099CAD0059E1DF /* DDYMacrol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYMacrol.h; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				A4C67327210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m */,
 				A4C6731F2109C9020059E1DF /* UIPreviewAction+DDYExtension.h */,
 				A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */,
+				A4A094D2212E7D2600F807FD /* UINavigationBar+DDYExtension.h */,
+				A4A094D3212E7D2700F807FD /* UINavigationBar+DDYExtension.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -597,6 +602,7 @@
 				A4DE08B92123B2E10073CEA1 /* UITableView+DDYSafe.m in Sources */,
 				A4DE089D212287D80073CEA1 /* DDYSafeHeader.m in Sources */,
 				A481C8A120FEED500052691B /* CAAnimations+LinkBlock.m in Sources */,
+				A4A094D4212E7D2700F807FD /* UINavigationBar+DDYExtension.m in Sources */,
 				A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */,
 				A481C71320F5BB170052691B /* ViewController.m in Sources */,
 				A481C8A820FEED500052691B /* UIImage+LinkBlock.m in Sources */,

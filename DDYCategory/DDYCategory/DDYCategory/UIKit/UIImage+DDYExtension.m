@@ -16,7 +16,6 @@
     CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context, rect);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    CGContextRelease(context);
     UIGraphicsEndImageContext();
     return img;
 }
@@ -31,7 +30,6 @@
     CGContextSetLineWidth(context, 2.0);
     CGContextStrokePath(context);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    CGContextRelease(context);
     UIGraphicsEndImageContext();
     return img;
 }
@@ -44,7 +42,6 @@
     CGContextSetFillColorWithColor(context,color.CGColor);
     CGContextFillEllipseInRect(context, rect);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    CGContextRelease(context);
     UIGraphicsEndImageContext();
     return img;
 }
@@ -59,7 +56,6 @@
     CGContextSetLineWidth(context, 1);
     CGContextStrokePath(context);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    CGContextRelease(context);
     UIGraphicsEndImageContext();
     return img;
 }

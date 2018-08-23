@@ -38,6 +38,25 @@
     [self btn:290 style:DDYBtnStyleNaturalImgRight  padding:10 tag:105];
     [self testLinkBlock];
     [self testTextView];
+    
+    UIImage *image = [UIImage imageNamed:@"qrcode"];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *imagePath = [documents stringByAppendingPathComponent:@"test.png"];
+    [[NSFileManager defaultManager] createFileAtPath:imagePath contents:imageData attributes:nil];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, DDYTopH+160, 30, 30)];
+    UIImage *showImage = [UIImage imageWithContentsOfFile:imagePath];
+    [self.view addSubview:imageView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
+            NSData *newImageData = UIImagePNGRepresentation(_img);
+            [[NSFileManager defaultManager] createFileAtPath:imagePath contents:newImageData attributes:nil];
+            imageView.image = showImage;
+        });
+    });
 }
 
 - (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding tag:(NSUInteger)tag {
@@ -104,6 +123,7 @@
     if (sender.tag == 101) {
         [UIAlertView ddy_AlertTitle:@"T" message:@"M" cancelTitle:@"0" otherTitle:@"1" clickIndexBlock:^(UIAlertView *alertView, NSInteger index) {
             NSLog(@"%d", (int)index);
+            
         }];
     }
     if (sender.tag == 102) {
@@ -123,6 +143,8 @@
         NSDictionary *dict = [NSDictionary dictionary];
         NSString *nilString = nil;
         [dict setValue:nilString forKey:nilString];
+        
+        [self.navigationController pushViewController:[DDYTestNavigationVC new] animated:YES];
     }
     
 }
