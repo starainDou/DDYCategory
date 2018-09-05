@@ -2,7 +2,6 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <UIKit/UIKit.h>
-#import "NSString+DDYExtension.h"
 
 @implementation NSArray (DDYExtension)
 
@@ -58,13 +57,20 @@
             
             for (NSArray *itemArray in self) {
                 NSString *str = (NSString *)object_getIvar(itemArray[0], ivar);
-                char c = [NSString ddy_blankString:str] ? '#' : [str characterAtIndex:0];
+                char c = [self ddy_SortBlankString:str] ? '#' : [str characterAtIndex:0];
                 if (!isalpha(c)) c = '#';
                 [section addObject:[NSString stringWithFormat:@"%c", toupper(c)]];
             }
         }
     }
     return section;
+}
+
+- (BOOL)ddy_SortBlankString:(NSString *)string {
+    if (string == nil || string == NULL || [string isKindOfClass:[NSNull class]] || [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]==0) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

@@ -254,3 +254,12 @@ return _instance;\
 return MAXFLOAT;\
 }
 #endif
+
+/** 锁 */
+#define DDYLOCK(...) dispatch_semaphore_wait(self->_lock, DISPATCH_TIME_FOREVER); \
+__VA_ARGS__; \
+dispatch_semaphore_signal(self->_lock);
+
+#define DDYLOCK_VIEW(...) dispatch_semaphore_wait(view->_lock, DISPATCH_TIME_FOREVER); \
+__VA_ARGS__; \
+dispatch_semaphore_signal(view->_lock);

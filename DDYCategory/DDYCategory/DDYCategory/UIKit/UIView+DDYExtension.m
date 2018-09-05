@@ -401,11 +401,11 @@
 #pragma mark - 特效
 #pragma mark 破碎效果
 - (void)ddy_CrushEffectWithCellWidth:(CGFloat)cellW {
-    CGSize cellSize = CGSizeMake(cellW, cellW);
-    CGFloat cols = self.ddy_w / cellW;
-    CGFloat rows = self.ddy_h / cellW;
-    int fullCols = floorf(cols);
-    int fullRows = floorf(rows);
+//    CGSize cellSize = CGSizeMake(cellW, cellW);
+//    CGFloat cols = self.ddy_w / cellW;
+//    CGFloat rows = self.ddy_h / cellW;
+//    int fullCols = floorf(cols);
+//    int fullRows = floorf(rows);
 
 }
 

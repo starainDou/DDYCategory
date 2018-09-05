@@ -47,6 +47,7 @@
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, DDYTopH+160, 30, 30)];
     UIImage *showImage = [UIImage imageWithContentsOfFile:imagePath];
+//    imageView.image = showImage;
     [self.view addSubview:imageView];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
