@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03D4BE95233755BA00B91270 /* UIViewController+DDYPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */; };
 		A481C70F20F5BB170052691B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C70820F5BB170052691B /* AppDelegate.m */; };
 		A481C71020F5BB170052691B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A481C70920F5BB170052691B /* LaunchScreen.storyboard */; };
 		A481C71120F5BB170052691B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A481C70B20F5BB170052691B /* Info.plist */; };
@@ -88,6 +89,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYPresent.m"; sourceTree = "<group>"; };
+		03D4BE94233755BA00B91270 /* UIViewController+DDYPresent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYPresent.h"; sourceTree = "<group>"; };
 		A481C6F020F5BADE0052691B /* DDYCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDYCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A481C70720F5BB170052691B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A481C70820F5BB170052691B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 		A481C72020F5E4EF0052691B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				03D4BE94233755BA00B91270 /* UIViewController+DDYPresent.h */,
+				03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */,
 				A481C72320F5E4EF0052691B /* UIView+DDYExtension.h */,
 				A481C72420F5E4EF0052691B /* UIView+DDYExtension.m */,
 				A481C72120F5E4EF0052691B /* UIButton+DDYExtension.h */,
@@ -619,6 +624,7 @@
 				A481C89620FEED500052691B /* NSMutableString+LinkBlock.m in Sources */,
 				A4DE08B92123B2E10073CEA1 /* UITableView+DDYSafe.m in Sources */,
 				A4DE089D212287D80073CEA1 /* DDYSafeHeader.m in Sources */,
+				03D4BE95233755BA00B91270 /* UIViewController+DDYPresent.m in Sources */,
 				A481C8A120FEED500052691B /* CAAnimations+LinkBlock.m in Sources */,
 				A4A094D4212E7D2700F807FD /* UINavigationBar+DDYExtension.m in Sources */,
 				A481C8B220FEED500052691B /* UIWebView+LinkBlock.m in Sources */,
