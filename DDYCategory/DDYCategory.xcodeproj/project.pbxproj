@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03D4BE95233755BA00B91270 /* UIViewController+DDYPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */; };
+		9CD270392338D56B00E91AA2 /* UISearchBar+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD270382338D56B00E91AA2 /* UISearchBar+DDYExtension.m */; };
 		A481C70F20F5BB170052691B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C70820F5BB170052691B /* AppDelegate.m */; };
 		A481C71020F5BB170052691B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A481C70920F5BB170052691B /* LaunchScreen.storyboard */; };
 		A481C71120F5BB170052691B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A481C70B20F5BB170052691B /* Info.plist */; };
@@ -91,6 +92,8 @@
 /* Begin PBXFileReference section */
 		03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYPresent.m"; sourceTree = "<group>"; };
 		03D4BE94233755BA00B91270 /* UIViewController+DDYPresent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYPresent.h"; sourceTree = "<group>"; };
+		9CD270372338D56B00E91AA2 /* UISearchBar+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+DDYExtension.h"; sourceTree = "<group>"; };
+		9CD270382338D56B00E91AA2 /* UISearchBar+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+DDYExtension.m"; sourceTree = "<group>"; };
 		A481C6F020F5BADE0052691B /* DDYCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDYCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A481C70720F5BB170052691B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A481C70820F5BB170052691B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				A4C673202109C9020059E1DF /* UIPreviewAction+DDYExtension.m */,
 				A4A094D2212E7D2600F807FD /* UINavigationBar+DDYExtension.h */,
 				A4A094D3212E7D2700F807FD /* UINavigationBar+DDYExtension.m */,
+				9CD270372338D56B00E91AA2 /* UISearchBar+DDYExtension.h */,
+				9CD270382338D56B00E91AA2 /* UISearchBar+DDYExtension.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -681,6 +686,7 @@
 				A481C89F20FEED500052691B /* LinkInfo.m in Sources */,
 				A481C8A320FEED500052691B /* CAShapeLayer+LinkBlock.m in Sources */,
 				A481C72E20F5F7300052691B /* keccak.c in Sources */,
+				9CD270392338D56B00E91AA2 /* UISearchBar+DDYExtension.m in Sources */,
 				A481C8AE20FEED500052691B /* UITextField+LinkBlock.m in Sources */,
 				A481C73220F60E120052691B /* AppDelegate+DDYNotification.m in Sources */,
 				A481C88E20FEED500052691B /* NSArray+LinkBlock.m in Sources */,
@@ -817,16 +823,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23JJ7VRKJT;
+				DEVELOPMENT_TEAM = X634X4Y33S;
 				INFOPLIST_FILE = "$(SRCROOT)/DDYCategory/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartmesh.smart2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenuo.training;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -834,16 +840,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23JJ7VRKJT;
+				DEVELOPMENT_TEAM = X634X4Y33S;
 				INFOPLIST_FILE = "$(SRCROOT)/DDYCategory/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartmesh.smart2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenuo.training;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

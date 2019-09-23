@@ -41,7 +41,7 @@
     // 远程通知
     [self registerRemoteNotification];
     // 本地通知
-    [self registerLocalNotificationWithAlertTime:5];
+    [self registerLocalNotificationWithAlertTime:10];
 
     return YES;
 //    return [self ddy_NotificationApplication:application didFinishLaunchingWithOptions:launchOptions];

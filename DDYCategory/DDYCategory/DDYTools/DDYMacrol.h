@@ -133,7 +133,7 @@
 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
 [dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
 [dateFormatter setTimeStyle:NSDateFormatterShortStyle];\
-[dateFormatter setDateFormat:@"HH:mm:ss:SSS"]; \
+[dateFormatter setDateFormat:@"HH:mm:ss: "]; \
 NSString *str = [dateFormatter stringFromDate:[NSDate date]];\
 fprintf(stderr,"[%s %s %d]: %s\n",[str UTF8String], [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);\
 }

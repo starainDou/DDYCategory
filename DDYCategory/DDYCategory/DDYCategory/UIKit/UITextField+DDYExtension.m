@@ -37,4 +37,10 @@
     }
 }
 
+- (UILabel *)ddy_PlaceholderLabel {
+    Ivar ivar = class_getInstanceVariable([UITextField class], "_placeholderLabel");
+    UILabel *placeholderLabel = object_getIvar(self, ivar);
+    return placeholderLabel;
+}
+
 @end
