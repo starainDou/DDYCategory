@@ -5,11 +5,12 @@
 
 // MARK: 解决iOS13兼容
 - (UITextField *)ddy_SearchField {
+#ifdef __IPHONE_13_0
     if (@available(iOS 13.0, *)) {
         return self.searchTextField;
-    } else {
-        return [self valueForKey:@"_searchField"];
     }
+#endif
+    return [self valueForKey:@"_searchField"];
 }
 
 - (UILabel *)ddy_PlaceholderLabel {
