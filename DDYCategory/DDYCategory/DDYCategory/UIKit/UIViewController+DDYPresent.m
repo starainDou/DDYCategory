@@ -1,5 +1,7 @@
 #import "UIViewController+DDYPresent.h"
 #import <objc/runtime.h>
+#import <StoreKit/StoreKit.h>
+#import <SafariServices/SafariServices.h>
 
 @implementation UIViewController (DDYPresent)
 
@@ -40,12 +42,26 @@
     return obj ? [obj boolValue] : [self.class ddy_GlobalAutoSetModalPresentationStyle];
 }
 
+// MARK: 排除一些系统控制器
 + (BOOL)ddy_GlobalAutoSetModalPresentationStyle {
     if ([self isKindOfClass:[UIImagePickerController class]]) {
         return NO;
     } else if ([self isKindOfClass:[UIAlertController class]]) {
         return NO;
+    } else if ([self isKindOfClass:[UIActivityViewController class]]) {
+        return NO;
+    } else if ([self isKindOfClass:[UIDocumentInteractionController class]]) {
+        return NO;
+    } else if ([self isKindOfClass:[SFSafariViewController class]]) {
+           return NO;
     }
+#ifdef __IPHONE_10_3
+    else if ([self isKindOfClass:[SKStoreReviewController class]]) {
+        return NO;
+    } else if ([self isKindOfClass:[SKStoreProductViewController class]]) {
+        return NO;
+    }
+#endif
     return YES;
 }
 
