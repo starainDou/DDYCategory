@@ -139,9 +139,26 @@
     block(sender);
 }
 
-#pragma mark 使用颜色设置按钮背景
+#pragma mark 使用颜色设置按钮背景 state 位移枚举 0/1/10/11/100/101/110/111/1000/1001/1010/1011/1100/1101/1110/1111
 - (void)ddy_BackgroundColor:(UIColor *)bgColor forState:(UIControlState)state {
+    
+    NSDictionary *localInfo = objc_getAssociatedObject(self, "DDYBackgroundImageColorInfo") ?:[NSDictionary dictionary];
+    NSMutableDictionary *tempInfo = [NSMutableDictionary dictionaryWithDictionary:localInfo];
+    tempInfo[[NSString stringWithFormat:@"%ld",(long)state]] = bgColor;
+    objc_setAssociatedObject(self, "DDYBackgroundImageColorInfo", tempInfo, OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self setBackgroundImage:[UIImage ddy_RectImageWithColor:bgColor size:CGSizeMake(1, 1)] forState:state];
+}
+
+#pragma mark 内部更改DarkMode切换时背景
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    NSDictionary *infoDict = objc_getAssociatedObject(self, "DDYBackgroundImageColorInfo");
+    if (infoDict && [infoDict isKindOfClass:[NSDictionary class]]) {
+        NSArray *allKeys = infoDict.allKeys;
+        for (NSUInteger i = 0; i < allKeys.count; i++) { //swift简单写成 for (key, value) in infoDict { }
+            [self ddy_BackgroundColor:infoDict[allKeys[i]] forState:[allKeys[i] integerValue]];
+        }
+    }
 }
 
 @end
