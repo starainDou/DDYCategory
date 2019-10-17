@@ -30,35 +30,75 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _img = [self circleImageWithColor:[UIColor ddy_ColorWithHexString:@"#00FFFF"] radius:10];
-    [self btn:10  style:DDYBtnStyleImgLeft  padding:10 tag:101];
-    [self btn:80  style:DDYBtnStyleImgRight padding:10 tag:102];
-    [self btn:150 style:DDYBtnStyleImgTop   padding:10 tag:103];
-    [self btn:220 style:DDYBtnStyleImgDown  padding:10 tag:104];
-    [self btn:290 style:DDYBtnStyleNaturalImgRight  padding:10 tag:105];
-    [self testLinkBlock];
-    [self testTextView];
     
-    UIImage *image = [UIImage imageNamed:@"qrcode"];
-    NSData *imageData = UIImagePNGRepresentation(image);
-    NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *imagePath = [documents stringByAppendingPathComponent:@"test.png"];
-    [[NSFileManager defaultManager] createFileAtPath:imagePath contents:imageData attributes:nil];
+    UIColor *titleColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull trainCollection) {
+        if ([trainCollection userInterfaceStyle] == UIUserInterfaceStyleLight) {
+            return [UIColor whiteColor];
+        } else {
+            return [UIColor blackColor];
+        }
+    }];
+    UIColor *backColorN = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull trainCollection) {
+        if ([trainCollection userInterfaceStyle] == UIUserInterfaceStyleLight) {
+            return [UIColor blueColor];
+        } else {
+            return [UIColor yellowColor];
+        }
+    }];
+    UIColor *backColorS = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull trainCollection) {
+        if ([trainCollection userInterfaceStyle] == UIUserInterfaceStyleLight) {
+            return [UIColor blackColor];
+        } else {
+            return [UIColor greenColor];
+        }
+    }];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, DDYTopH+160, 30, 30)];
-    UIImage *showImage = [UIImage imageWithContentsOfFile:imagePath];
-//    imageView.image = showImage;
-    [self.view addSubview:imageView];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
-            NSData *newImageData = UIImagePNGRepresentation(_img);
-            [[NSFileManager defaultManager] createFileAtPath:imagePath contents:newImageData attributes:nil];
-            imageView.image = showImage;
-        });
+    UIButton *testButton = ({
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button ddy_BackgroundColor:backColorN forState:UIControlStateNormal];
+        [button ddy_BackgroundColor:backColorS forState:UIControlStateSelected];
+        [button setTitle:@"Test Background Button" forState:UIControlStateNormal];
+        [button setTitleColor:titleColor forState:UIControlStateNormal];
+        [button setFrame:CGRectMake(20, 200, 335, 30)];
+        button;
+    });
+    [self.view addSubview:testButton];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        testButton.selected = YES;
     });
 }
+
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    _img = [self circleImageWithColor:[UIColor ddy_ColorWithHexString:@"#00FFFF"] radius:10];
+//    [self btn:10  style:DDYBtnStyleImgLeft  padding:10 tag:101];
+//    [self btn:80  style:DDYBtnStyleImgRight padding:10 tag:102];
+//    [self btn:150 style:DDYBtnStyleImgTop   padding:10 tag:103];
+//    [self btn:220 style:DDYBtnStyleImgDown  padding:10 tag:104];
+//    [self btn:290 style:DDYBtnStyleNaturalImgRight  padding:10 tag:105];
+//    [self testLinkBlock];
+//    [self testTextView];
+//
+//    UIImage *image = [UIImage imageNamed:@"qrcode"];
+//    NSData *imageData = UIImagePNGRepresentation(image);
+//    NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+//    NSString *imagePath = [documents stringByAppendingPathComponent:@"test.png"];
+//    [[NSFileManager defaultManager] createFileAtPath:imagePath contents:imageData attributes:nil];
+//
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, DDYTopH+160, 30, 30)];
+//    UIImage *showImage = [UIImage imageWithContentsOfFile:imagePath];
+////    imageView.image = showImage;
+//    [self.view addSubview:imageView];
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
+//            NSData *newImageData = UIImagePNGRepresentation(_img);
+//            [[NSFileManager defaultManager] createFileAtPath:imagePath contents:newImageData attributes:nil];
+//            imageView.image = showImage;
+//        });
+//    });
+//}
 
 - (UIButton *)btn:(CGFloat)x style:(DDYBtnStyle)style padding:(CGFloat)padding tag:(NSUInteger)tag {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
