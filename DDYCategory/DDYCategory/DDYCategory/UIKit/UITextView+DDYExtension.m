@@ -1,4 +1,4 @@
-#import "UITextView+DDYExtension.h"
+ #import "UITextView+DDYExtension.h"
 #import <objc/runtime.h>
 
 @interface UITextView ()
@@ -237,11 +237,6 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     [self ddy_TextViewDidChange];
-}
-
-- (instancetype)ddy_Init {
-    
-    return [self ddy_Init];
 }
 
 - (void)ddy_dealloc {
