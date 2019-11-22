@@ -5,13 +5,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (DDYPresent)
 
-/// 如果以后迭代版本想全部用系统原来样式，统一返回NO即可
-/// rentrn BOOL UIImagePickerController/UIAlertController is NO，others is YES
-+ (BOOL)ddy_GlobalAutoSetModalPresentationStyle;
+/// 自动调整模态弹出样式时要排除的控制器(如果未设置则使用内置)
+/// @param controllerNameArray 模态弹出的控制器名称数组
++ (void)ddy_ExcludeControllerNameArray:(NSArray<NSString *> *)controllerNameArray;
 
-/// 具体某个控制器不想更改了(想用系统默认)设置NO
-/// return BOOL [Class ddy_GlobalAutoSetModalPresentationStyle];
-@property (nonatomic, assign) BOOL ddy_AutoSetModalPresentationStyle;
+/// 是否自动调整模态弹出全屏样式
+/// NO:表示不自动调整，保持默认，可能全屏样式也可能其他样式
+/// YES:表示调整为全屏样式
+/// 如果是排除的控制器数组包含的控制器则默认NO
+/// 如果不在排除的控制器数组内包含则默认YES
+@property (nonatomic, assign) BOOL ddy_AutoSetModalPresentationStyleFullScreen;
 
 @end
 
