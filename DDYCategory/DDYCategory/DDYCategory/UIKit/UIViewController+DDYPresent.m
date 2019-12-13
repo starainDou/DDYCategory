@@ -61,6 +61,8 @@ static NSArray *excludeControllerNameArray;
     [nameArray addObject:@"SFSafariViewController"]; // API_AVAILABLE(ios(9.0)) #import <SafariServices/SafariServices.h>
     [nameArray addObject:@"SKStoreReviewController"]; // API_AVAILABLE(ios(10.3), macos(10.14)) #import <StoreKit/StoreKit.h>
     [nameArray addObject:@"SKStoreProductViewController"]; // API_AVAILABLE(ios(6.0)) #import <StoreKit/StoreKit.h>
+    [nameArray addObject:@"UIPageViewController"];
+    [nameArray addObject:@"UISplitViewController"];
     return nameArray;
 }
 
