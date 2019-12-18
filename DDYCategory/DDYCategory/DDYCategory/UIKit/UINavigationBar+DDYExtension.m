@@ -34,9 +34,22 @@
     
     [self ddy_LayoutSubviews];
     if (@available(iOS 11, *)) {
-        for (UIView *aView in self.subviews) {
-            if ([@[@"_UINavigationBarBackground", @"_UIBarBackground"] containsObject:NSStringFromClass([aView class])]) {
-                aView.frame = CGRectMake(0, -CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)+CGRectGetMinY(self.frame));
+//        for (UIView *aView in self.subviews) {
+//            if ([@[@"_UINavigationBarBackground", @"_UIBarBackground"] containsObject:NSStringFromClass([aView class])]) {
+//                aView.frame = CGRectMake(0, -CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)+CGRectGetMinY(self.frame));
+//            }
+//        }
+        for (UIView *subView in self.subviews) {
+            if ([NSStringFromClass([subView class]) isEqualToString: @"_UIBarBackground"]) {
+                CGRect rc = subView.frame;
+                rc.size.height = 44 + [[UIApplication sharedApplication] statusBarFrame].size.height;
+                rc.origin.y = 0;
+                subView.frame = rc;
+            } else if ([NSStringFromClass([subView class]) isEqualToString: @"_UINavigationBarContentView"]) {
+                CGRect rc = subView.frame;
+                rc.size.height = 44;
+                rc.origin.y = [[UIApplication sharedApplication] statusBarFrame].size.height;
+                subView.frame = rc;
             }
         }
     }
