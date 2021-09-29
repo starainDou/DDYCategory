@@ -90,6 +90,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0309F3402608A0D6000DEDB4 /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
+		036ED92F26679D1F00DD29E2 /* ViewControllerExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerExtension.h; sourceTree = "<group>"; };
 		03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYPresent.m"; sourceTree = "<group>"; };
 		03D4BE94233755BA00B91270 /* UIViewController+DDYPresent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYPresent.h"; sourceTree = "<group>"; };
 		9CD270372338D56B00E91AA2 /* UISearchBar+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+DDYExtension.h"; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 		A481C72220F5E4EF0052691B /* UIButton+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDYExtension.m"; sourceTree = "<group>"; };
 		A481C72320F5E4EF0052691B /* UIView+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C72420F5E4EF0052691B /* UIView+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDYExtension.m"; sourceTree = "<group>"; };
-		A481C72520F5E4EF0052691B /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
 		A481C72920F5E9BA0052691B /* NSString+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYExtension.h"; sourceTree = "<group>"; };
 		A481C72A20F5E9BA0052691B /* NSString+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYExtension.m"; sourceTree = "<group>"; };
 		A481C72C20F5F7300052691B /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
@@ -305,6 +306,7 @@
 				A481C70C20F5BB170052691B /* main.m */,
 				A481C70D20F5BB170052691B /* ViewController.h */,
 				A481C70E20F5BB170052691B /* ViewController.m */,
+				036ED92F26679D1F00DD29E2 /* ViewControllerExtension.h */,
 				A4C6735A210B290A0059E1DF /* DDYTestNavigationVC.h */,
 				A4C6735B210B290A0059E1DF /* DDYTestNavigationVC.m */,
 			);
@@ -314,7 +316,7 @@
 		A481C71420F5BB430052691B /* DDYCategory */ = {
 			isa = PBXGroup;
 			children = (
-				A481C72520F5E4EF0052691B /* DDYCategoryHeader.h */,
+				0309F3402608A0D6000DEDB4 /* DDYCategoryHeader.h */,
 				A481C72820F5E9A10052691B /* Foundation */,
 				A481C72020F5E4EF0052691B /* UIKit */,
 			);
@@ -823,14 +825,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X634X4Y33S;
+				DEVELOPMENT_TEAM = AS43JR7V78;
 				INFOPLIST_FILE = "$(SRCROOT)/DDYCategory/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenuo.training;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.orangelab.werewolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -840,14 +842,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X634X4Y33S;
+				DEVELOPMENT_TEAM = AS43JR7V78;
 				INFOPLIST_FILE = "$(SRCROOT)/DDYCategory/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenuo.training;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.orangelab.werewolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
