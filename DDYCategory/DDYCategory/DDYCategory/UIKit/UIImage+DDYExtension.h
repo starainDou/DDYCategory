@@ -62,4 +62,7 @@ CG_EXTERN DDYImageType DDYImageDetectType(CFDataRef data);
 /** 根据coreImage 滤镜名称为原图加滤镜 */
 - (UIImage *)ddy_FilterWithFilterName:(NSString *)filterName;
 
+/// 灰度图
+- (UIImage *)grayImage;
+
 @end

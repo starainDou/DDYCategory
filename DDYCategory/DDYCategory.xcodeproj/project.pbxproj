@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03A418B32766EDE40067BDE1 /* UIImageView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A418B22766EDE40067BDE1 /* UIImageView+DDYExtension.m */; };
 		03D4BE95233755BA00B91270 /* UIViewController+DDYPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */; };
 		9CD270392338D56B00E91AA2 /* UISearchBar+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD270382338D56B00E91AA2 /* UISearchBar+DDYExtension.m */; };
 		A481C70F20F5BB170052691B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A481C70820F5BB170052691B /* AppDelegate.m */; };
@@ -92,6 +93,8 @@
 /* Begin PBXFileReference section */
 		0309F3402608A0D6000DEDB4 /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
 		036ED92F26679D1F00DD29E2 /* ViewControllerExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerExtension.h; sourceTree = "<group>"; };
+		03A418B12766EDE40067BDE1 /* UIImageView+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DDYExtension.h"; sourceTree = "<group>"; };
+		03A418B22766EDE40067BDE1 /* UIImageView+DDYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DDYExtension.m"; sourceTree = "<group>"; };
 		03D4BE93233755BA00B91270 /* UIViewController+DDYPresent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYPresent.m"; sourceTree = "<group>"; };
 		03D4BE94233755BA00B91270 /* UIViewController+DDYPresent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYPresent.h"; sourceTree = "<group>"; };
 		9CD270372338D56B00E91AA2 /* UISearchBar+DDYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+DDYExtension.h"; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				A481C77020F8939F0052691B /* UIAlertView+DDYExtension.m */,
 				A481C76620F85E340052691B /* UIImage+DDYExtension.h */,
 				A481C76720F85E340052691B /* UIImage+DDYExtension.m */,
+				03A418B12766EDE40067BDE1 /* UIImageView+DDYExtension.h */,
+				03A418B22766EDE40067BDE1 /* UIImageView+DDYExtension.m */,
 				A481C77220F8A4640052691B /* UITextField+DDYExtension.h */,
 				A481C77320F8A4640052691B /* UITextField+DDYExtension.m */,
 				A481C95921016FDA0052691B /* UITextView+DDYExtension.h */,
@@ -623,6 +628,7 @@
 				A481C8A420FEED500052691B /* UIBezierPath+LinkBlock.m in Sources */,
 				A481C76E20F891D70052691B /* NSTimer+DDYExtension.m in Sources */,
 				A4C67328210AEDBB0059E1DF /* AppDelegate+DDY3DTouch.m in Sources */,
+				03A418B32766EDE40067BDE1 /* UIImageView+DDYExtension.m in Sources */,
 				A4DE089421226E600073CEA1 /* NSString+DDYSafe.m in Sources */,
 				A481C8A620FEED500052691B /* UIColor+LinkBlock.m in Sources */,
 				A481C88D20FEED500052691B /* JSValue+LinkBlock.m in Sources */,
